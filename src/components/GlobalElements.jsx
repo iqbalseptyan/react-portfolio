@@ -5,17 +5,17 @@ export const Section = styled.section`
 `;
 
 export const SectionTitle = styled.h1`
+  color: var(--dark-color);
   font-size: var(--h1-font-size);
+  text-align: center;
 `;
 
 export const SectionSubtitle = styled.small`
   display: block;
+  color: var(--grey-color);
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-3);
-
-  &.SectionTitle {
-    text-align: center;
-  }
+  text-align: center;
 `;
 
 export const Container = styled.div`
