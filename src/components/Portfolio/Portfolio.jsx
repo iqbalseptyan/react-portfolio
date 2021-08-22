@@ -1,35 +1,129 @@
-import React from "react";
-// import Swiper JS
+import React, { useRef } from "react";
+import { Section, SectionSubtitle, SectionTitle } from "../GlobalElements";
+import {
+  PortfolioDescription,
+  ContainerPortfolio,
+  PortfolioData,
+  PortfolioImg,
+  PortfolioTitle,
+  PortfolioContent,
+  SwiperButtonNext,
+  SwiperIcon,
+  SwiperButtonPrev,
+  SwiperNavigation,
+} from "./PortfolioElements";
+import { Button, ButtonFlex, ButtonIcon } from "../ButtonElements";
+import image from "../../images/Image.png";
+import { FaArrowRight } from "react-icons/fa";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import Swiper styles
+import SwiperCore, { Navigation, Pagination } from "swiper/core";
 import "swiper/swiper-bundle.css";
 import "swiper/components/navigation/navigation.min.css";
+import "swiper/components/pagination/pagination.min.css";
 
-// import Swiper core and required modules
-import SwiperCore, { Navigation, Pagination } from "swiper/core";
-
-// install Swiper modules
 SwiperCore.use([Navigation, Pagination]);
+
 const Portfolio = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
-    <>
-      <Swiper
-        navigation={true}
-        pagination={{
-          dynamicBullets: true,
-        }}
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
-    </>
+    <Section>
+      <SectionTitle>Portfolio</SectionTitle>
+      <SectionSubtitle>Most recent work</SectionSubtitle>
+      <ContainerPortfolio>
+        <Swiper
+          loop
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.update();
+          }}
+          pagination={{
+            dynamicBullets: true,
+          }}
+        >
+          <SwiperSlide>
+            <PortfolioContent>
+              <PortfolioImg src={image} />
+              <PortfolioData>
+                <PortfolioTitle>Modern Website</PortfolioTitle>
+                <PortfolioDescription>
+                  Website adoptable to all devices, with ui components and
+                  animated interactions
+                </PortfolioDescription>
+                <Button>
+                  <ButtonFlex>
+                    Detail
+                    <ButtonIcon>
+                      <FaArrowRight />
+                    </ButtonIcon>
+                  </ButtonFlex>
+                </Button>
+              </PortfolioData>
+            </PortfolioContent>
+          </SwiperSlide>
+          <SwiperSlide>
+            <PortfolioContent>
+              <PortfolioImg src={image} />
+              <PortfolioData>
+                <PortfolioTitle>Modern Website</PortfolioTitle>
+                <PortfolioDescription>
+                  Website adoptable to all devices, with ui components and
+                  animated interactions
+                </PortfolioDescription>
+                <Button>
+                  <ButtonFlex>
+                    Detail
+                    <ButtonIcon>
+                      <FaArrowRight />
+                    </ButtonIcon>
+                  </ButtonFlex>
+                </Button>
+              </PortfolioData>
+            </PortfolioContent>
+          </SwiperSlide>
+          <SwiperSlide>
+            <PortfolioContent>
+              <PortfolioImg src={image} />
+              <PortfolioData>
+                <PortfolioTitle>Modern Website</PortfolioTitle>
+                <PortfolioDescription>
+                  Website adoptable to all devices, with ui components and
+                  animated interactions
+                </PortfolioDescription>
+                <Button>
+                  <ButtonFlex>
+                    Detail
+                    <ButtonIcon>
+                      <FaArrowRight />
+                    </ButtonIcon>
+                  </ButtonFlex>
+                </Button>
+              </PortfolioData>
+            </PortfolioContent>
+          </SwiperSlide>
+
+          <SwiperNavigation>
+            <SwiperButtonPrev ref={prevRef}>
+              <SwiperIcon>
+                <MdKeyboardArrowLeft />
+              </SwiperIcon>
+            </SwiperButtonPrev>
+            <SwiperButtonNext ref={nextRef}>
+              <SwiperIcon>
+                <MdKeyboardArrowRight />
+              </SwiperIcon>
+            </SwiperButtonNext>
+          </SwiperNavigation>
+        </Swiper>
+      </ContainerPortfolio>
+    </Section>
   );
 };
 

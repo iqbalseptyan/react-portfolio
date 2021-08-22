@@ -72,3 +72,8 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--white-color);
 }
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  color: black;
+}
