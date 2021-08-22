@@ -24,7 +24,7 @@ export const SectionSubtitle = styled.small`
   text-align: center;
 `;
 
-export const Grid = styled(Container)`
+export const Grid = styled.div`
   display: grid;
   gap: 1.5rem;
 `;
