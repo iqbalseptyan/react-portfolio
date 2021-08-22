@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   display: inline-block;
-  background-color: var(--dark-purple-color);
-  color: var(--white-color);
-  padding: 1rem;
+  background-color: ${(props) =>
+    props.bgTransparent ? "transparent" : "var(--dark-purple-color)"};
+  color: ${(props) =>
+    props.bgTransparent ? "var(--dark-purple-color)" : "var(--white-color)"};
+  padding: ${(props) => (props.bgTransparent ? 0 : "1rem")};
+  border: none;
   border-radius: 10px;
   font-weight: var(--font-medium);
-
-  &:hover {
-    background-color: var(--purple-color);
-  }
+  cursor: pointer;
 `;
 
 export const ButtonIcon = styled.div`

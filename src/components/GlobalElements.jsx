@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
+export const Container = styled.section`
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+`;
+
+export const Section = styled(Container)`
   padding: 2rem 0 4rem;
 `;
 
@@ -18,13 +24,7 @@ export const SectionSubtitle = styled.small`
   text-align: center;
 `;
 
-export const Container = styled.div`
-  max-width: 768px;
-  margin-left: var(--mb-1-5);
-  margin-right: var(--mb-1-5);
-`;
-
-export const Grid = styled.div`
+export const Grid = styled(Container)`
   display: grid;
   gap: 1.5rem;
 `;
