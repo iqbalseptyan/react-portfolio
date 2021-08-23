@@ -3,7 +3,7 @@ import { Container } from "../GlobalElements";
 import { device } from "../MediaQueries";
 
 export const ContainerHero = styled(Container)`
-  /* padding: 2rem; */
+  color: var(--white-color);
   margin-top: 2rem;
 `;
 
@@ -39,18 +39,24 @@ export const HeroContent = styled.div`
     transition: 0.3s;
     transform: translate(-50%, 10%);
   }
+
+  @media ${device.mobileM} {
+    transition: 0.3s;
+    transform: translate(-50%, 50%);
+  }
 `;
 
 export const HeroTitle = styled.h1`
   font-size: var(--h1-font-size);
-  color: var(--dark-purple-color);
+  color: var(--purple-color);
+
+  @media ${device.mobileM} {
+    font-size: var(--h3-font-size);
+  }
 `;
 
 export const HeroSubtitle = styled.small`
   font-size: var(--small-font-size);
-
-  /* left: 50%; */
-  /* transform: translate(-50%, -100%); */
 `;
 
 export const HeroImg = styled.img`

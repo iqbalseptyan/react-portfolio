@@ -12,7 +12,7 @@ import {
   BlobImg,
 } from "./HomeElements";
 import { FaArrowRight, FaGithub, FaLinkedin } from "react-icons/fa";
-import { Button, ButtonFlex, ButtonIcon } from "../ButtonElements";
+import { Button, ButtonFlex, ButtonIcon, ButtonText } from "../ButtonElements";
 import {} from "react-icons/fa";
 
 const Home = () => {
@@ -42,7 +42,7 @@ const Home = () => {
               </HomeDescription>
               <Button>
                 <ButtonFlex>
-                  Contact Me
+                  <ButtonText>Contact Me</ButtonText>
                   <ButtonIcon>
                     <FaArrowRight />
                   </ButtonIcon>

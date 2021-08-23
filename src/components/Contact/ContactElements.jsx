@@ -18,6 +18,11 @@ export const ContactIcon = styled.img`
   align-self: center;
   justify-self: center;
   width: 100%;
+
+  @media ${device.mobileM} {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
 `;
 
 export const ContactForm = styled.form``;
