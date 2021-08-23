@@ -11,7 +11,6 @@ export const ScrollTop = styled.div`
 `;
 
 export const ScrollIcon = styled.a`
-  /* right: 0; */
   font-size: 1.25rem;
   color: var(--dark-purple-color);
 `;

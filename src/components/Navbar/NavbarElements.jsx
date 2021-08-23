@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Grid } from "../GlobalElements";
-import { device } from "../MediaQueries";
+// import { device } from "../MediaQueries";
 
 export const Header = styled.div`
   width: 100%;
@@ -9,6 +9,7 @@ export const Header = styled.div`
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--white-color);
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 `;
 
 export const Nav = styled.nav`
@@ -33,7 +34,7 @@ export const NavLogo = styled.a`
 export const NavMenu = styled.ul`
   list-style: none;
 
-  @media ${device.tablet} {
+  @media (max-width: 768px) {
     position: fixed;
     bottom: ${(props) => (props.show ? 0 : "-100%")};
     left: 0;
