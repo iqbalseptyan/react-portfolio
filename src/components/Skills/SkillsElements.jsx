@@ -1,23 +1,28 @@
 import styled from "styled-components";
 import { Container, Grid } from "../GlobalElements";
+import { device } from "../MediaQueries";
 
-export const ContainerSkills = styled(Container, Grid)`
-  row-gap: 0;
+export const ContainerSkills = styled(Container)`
+  color: var(--black-color);
 `;
 
-export const SkillsContent = styled.div``;
+export const SkillsWrapper = styled(Grid)`
+  @media ${device.mobileM} {
+    gap: 0;
+  }
+`;
 
 export const SkillsHeader = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: var(--mb-2-5);
-  cursor: pointer;
+  /* margin-bottom: var(--mb-2-5); */
 `;
 
 export const SkillsIcon = styled.div`
   font-size: 2rem;
   color: var(--dark-purple-color);
   padding: 1rem;
+  cursor: pointer;
 `;
 
 export const SkillArrowIcon = styled(SkillsIcon)`
@@ -25,24 +30,35 @@ export const SkillArrowIcon = styled(SkillsIcon)`
 `;
 
 export const SkillsTitle = styled.h1`
-  font-size: var(--h3-font-size);
+  font-size: var(--h1-font-size);
+
+  @media ${device.mobileM} {
+    font-size: var(--h3-font-size);
+  }
 `;
 
 export const SkillsSubTitle = styled.p`
   font-size: var(--small-font-size);
   color: var(--grey-color);
+
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
+  }
 `;
 
 export const SkillsList = styled(Grid)`
   margin-bottom: var(--mb-2-5);
   height: ${(props) => (props.open ? 0 : "max-content")};
-
   overflow: auto;
-  transition: width 2s, height 4s;
+
+  @media ${device.mobileM} {
+    margin-bottom: 0;
+  }
 `;
 
 export const SkillsData = styled.div`
-  transition: 2s;
+  transition: 0.3s;
+
   color: var(--black-color);
 `;
 
@@ -55,11 +71,19 @@ export const SkillsTitles = styled.div`
 export const SkillsName = styled.h1`
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+
+  @media ${device.mobileM} {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const SkillsNumber = styled.h1`
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+
+  @media ${device.mobileM} {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const SkillsBar = styled.progress`

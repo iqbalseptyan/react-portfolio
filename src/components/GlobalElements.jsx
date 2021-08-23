@@ -1,9 +1,15 @@
 import styled from "styled-components";
+import { device } from "./MediaQueries";
 
 export const Container = styled.section`
   max-width: 768px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
+
+  @media ${device.mobileM} {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
 `;
 
 export const Section = styled(Container)`

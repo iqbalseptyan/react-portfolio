@@ -6,11 +6,12 @@ import {
   PortfolioData,
   PortfolioImg,
   PortfolioTitle,
-  PortfolioContent,
+  PortfolioWrapper,
   SwiperButtonNext,
   SwiperIcon,
   SwiperButtonPrev,
   SwiperNavigation,
+  PortfolioLink,
 } from "./PortfolioElements";
 import { Button, ButtonFlex, ButtonIcon } from "../ButtonElements";
 import image from "../../images/Image.png";
@@ -49,7 +50,7 @@ const Portfolio = () => {
           }}
         >
           <SwiperSlide>
-            <PortfolioContent>
+            <PortfolioWrapper>
               <PortfolioImg src={image} />
               <PortfolioData>
                 <PortfolioTitle>Modern Website</PortfolioTitle>
@@ -57,19 +58,21 @@ const Portfolio = () => {
                   Website adoptable to all devices, with ui components and
                   animated interactions
                 </PortfolioDescription>
-                <Button>
-                  <ButtonFlex>
-                    Detail
-                    <ButtonIcon>
-                      <FaArrowRight />
-                    </ButtonIcon>
-                  </ButtonFlex>
-                </Button>
+                <PortfolioLink>
+                  <Button>
+                    <ButtonFlex>
+                      Detail
+                      <ButtonIcon>
+                        <FaArrowRight />
+                      </ButtonIcon>
+                    </ButtonFlex>
+                  </Button>
+                </PortfolioLink>
               </PortfolioData>
-            </PortfolioContent>
+            </PortfolioWrapper>
           </SwiperSlide>
           <SwiperSlide>
-            <PortfolioContent>
+            <PortfolioWrapper>
               <PortfolioImg src={image} />
               <PortfolioData>
                 <PortfolioTitle>Modern Website</PortfolioTitle>
@@ -86,10 +89,10 @@ const Portfolio = () => {
                   </ButtonFlex>
                 </Button>
               </PortfolioData>
-            </PortfolioContent>
+            </PortfolioWrapper>
           </SwiperSlide>
           <SwiperSlide>
-            <PortfolioContent>
+            <PortfolioWrapper>
               <PortfolioImg src={image} />
               <PortfolioData>
                 <PortfolioTitle>Modern Website</PortfolioTitle>
@@ -106,7 +109,7 @@ const Portfolio = () => {
                   </ButtonFlex>
                 </Button>
               </PortfolioData>
-            </PortfolioContent>
+            </PortfolioWrapper>
           </SwiperSlide>
 
           <SwiperNavigation>

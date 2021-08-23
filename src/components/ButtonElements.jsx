@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "./MediaQueries";
 
 export const Button = styled.button`
   display: inline-block;
@@ -11,6 +12,18 @@ export const Button = styled.button`
   border-radius: 10px;
   font-weight: var(--font-medium);
   cursor: pointer;
+  width: min-content;
+
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
+  }
+`;
+
+export const ButtonText = styled.span`
+  @media ${device.mobileM} {
+    width: max-content;
+    font-size: var(--smaller-font-size);
+  }
 `;
 
 export const ButtonIcon = styled.div`
@@ -18,6 +31,10 @@ export const ButtonIcon = styled.div`
   display: flex;
   margin-left: var(--mb-0-5);
   transition: 0.3s;
+
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
+  }
 `;
 
 export const ButtonFlex = styled.div`

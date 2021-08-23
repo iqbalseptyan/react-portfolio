@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Grid } from "../GlobalElements";
+import { device } from "../MediaQueries";
 // import { device } from "../MediaQueries";
 
 export const Header = styled.div`
@@ -7,13 +8,14 @@ export const Header = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
+  /* height: 80px; */
   z-index: var(--z-fixed);
   background-color: var(--white-color);
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 `;
 
 export const Nav = styled.nav`
-  max-width: 968px;
+  /* max-width: 968px; */
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -34,7 +36,7 @@ export const NavLogo = styled.a`
 export const NavMenu = styled.ul`
   list-style: none;
 
-  @media (max-width: 768px) {
+  @media ${device.tablet} {
     position: fixed;
     bottom: ${(props) => (props.show ? 0 : "-100%")};
     left: 0;
@@ -45,11 +47,18 @@ export const NavMenu = styled.ul`
     border-radius: 1rem 1rem 0 0;
     transition: 0.3s;
   }
+  @media ${device.mobileM} {
+    padding: 2rem 0.25rem 4rem;
+  }
 `;
 
 export const NavGridList = styled(Grid)`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+
+  @media ${device.mobileM} {
+    column-gap: 0;
+  }
 `;
 
 export const NavItem = styled.li`

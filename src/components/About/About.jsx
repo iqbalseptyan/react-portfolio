@@ -1,13 +1,13 @@
 import React from "react";
 import { Section, SectionSubtitle, SectionTitle } from "../GlobalElements";
 import {
-  AboutData,
   AboutDescription,
   AboutImg,
   AboutInfo,
   AboutInfoSubTitle,
   AboutInfoTitle,
   AboutInfoWrapper,
+  AboutWrapper,
   ContainerAbout,
 } from "./AboutElements";
 import iqbal from "../../images/iqbal.png";
@@ -18,8 +18,8 @@ const About = () => {
       <SectionTitle>About Me</SectionTitle>
       <SectionSubtitle>Introduction</SectionSubtitle>
       <ContainerAbout>
-        <AboutImg src={iqbal} />
-        <AboutData>
+        <AboutWrapper>
+          <AboutImg src={iqbal} />
           <AboutDescription>
             Web and mobile app developer, with extensive knowledge and years
             experience from studying working in web and mobile app technologies,
@@ -39,7 +39,7 @@ const About = () => {
               <AboutInfoSubTitle>Companies project worked</AboutInfoSubTitle>
             </AboutInfoWrapper>
           </AboutInfo>
-        </AboutData>
+        </AboutWrapper>
       </ContainerAbout>
     </Section>
   );

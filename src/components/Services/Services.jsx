@@ -3,16 +3,18 @@ import Modal from "react-modal";
 import { Section, SectionSubtitle, SectionTitle } from "../GlobalElements";
 import {
   ContainerServices,
-  ServicesContent,
+  ServicesCard,
+  ServicesCardWrapper,
   ServicesIcon,
   ServicesModal,
   ServicesModalClose,
-  ServicesModalContent,
+  ServicesModalWrapper,
   ServicesModalDetail,
   ServicesModalIcon,
   ServicesModalList,
   ServicesModalTitle,
   ServicesTitle,
+  ServicesWrapper,
 } from "./ServicesElements";
 import {
   FaArrowRight,
@@ -20,7 +22,7 @@ import {
   FaDatabase,
   FaRegCheckCircle,
 } from "react-icons/fa";
-import { Button, ButtonFlex, ButtonIcon } from "../ButtonElements";
+import { Button, ButtonFlex, ButtonIcon, ButtonText } from "../ButtonElements";
 import { MdClose } from "react-icons/md";
 
 const customStyles = {
@@ -62,35 +64,41 @@ const Services = () => {
       <SectionSubtitle>Offer</SectionSubtitle>
 
       <ContainerServices>
-        <ServicesContent>
-          <ServicesIcon>
-            <FaCode />
-          </ServicesIcon>
-          <ServicesTitle>Frontend Developer</ServicesTitle>
-          <Button bgTransparent onClick={openModalFE}>
-            <ButtonFlex>
-              View More
-              <ButtonIcon>
-                <FaArrowRight />
-              </ButtonIcon>
-            </ButtonFlex>
-          </Button>
-        </ServicesContent>
+        <ServicesWrapper>
+          <ServicesCard>
+            <ServicesCardWrapper>
+              <ServicesIcon>
+                <FaCode />
+              </ServicesIcon>
+              <ServicesTitle>Frontend Developer</ServicesTitle>
+              <Button bgTransparent onClick={openModalFE}>
+                <ButtonFlex>
+                  <ButtonText>View More</ButtonText>
+                  <ButtonIcon>
+                    <FaArrowRight />
+                  </ButtonIcon>
+                </ButtonFlex>
+              </Button>
+            </ServicesCardWrapper>
+          </ServicesCard>
 
-        <ServicesContent>
-          <ServicesIcon>
-            <FaDatabase />
-          </ServicesIcon>
-          <ServicesTitle>Backend Developer</ServicesTitle>
-          <Button bgTransparent onClick={openModalBE}>
-            <ButtonFlex>
-              View More
-              <ButtonIcon>
-                <FaArrowRight />
-              </ButtonIcon>
-            </ButtonFlex>
-          </Button>
-        </ServicesContent>
+          <ServicesCard>
+            <ServicesCardWrapper>
+              <ServicesIcon>
+                <FaDatabase />
+              </ServicesIcon>
+              <ServicesTitle>Backend Developer</ServicesTitle>
+              <Button bgTransparent onClick={openModalBE}>
+                <ButtonFlex>
+                  View More
+                  <ButtonIcon>
+                    <FaArrowRight />
+                  </ButtonIcon>
+                </ButtonFlex>
+              </Button>
+            </ServicesCardWrapper>
+          </ServicesCard>
+        </ServicesWrapper>
       </ContainerServices>
 
       <Modal
@@ -101,7 +109,7 @@ const Services = () => {
         contentLabel="Frontend Modal"
       >
         <ServicesModal>
-          <ServicesModalContent>
+          <ServicesModalWrapper>
             <ServicesModalTitle>Frontend Developer</ServicesModalTitle>
             <ServicesModalClose onClick={closeModalFE}>
               <MdClose />
@@ -126,7 +134,7 @@ const Services = () => {
                 Web page development
               </ServicesModalList>
             </ServicesModalDetail>
-          </ServicesModalContent>
+          </ServicesModalWrapper>
         </ServicesModal>
       </Modal>
 
@@ -138,7 +146,7 @@ const Services = () => {
         contentLabel="Example Modal"
       >
         <ServicesModal>
-          <ServicesModalContent>
+          <ServicesModalWrapper>
             <ServicesModalTitle>Backend Developer</ServicesModalTitle>
             <ServicesModalClose onClick={closeModalBE}>
               <MdClose />
@@ -163,7 +171,7 @@ const Services = () => {
                 Web page development
               </ServicesModalList>
             </ServicesModalDetail>
-          </ServicesModalContent>
+          </ServicesModalWrapper>
         </ServicesModal>
       </Modal>
     </Section>

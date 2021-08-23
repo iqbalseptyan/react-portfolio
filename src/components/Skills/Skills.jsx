@@ -4,7 +4,7 @@ import {
   ContainerSkills,
   SkillArrowIcon,
   SkillsBar,
-  SkillsContent,
+  SkillsWrapper,
   SkillsData,
   SkillsHeader,
   SkillsIcon,
@@ -28,7 +28,7 @@ const Skills = () => {
 
       <ContainerSkills>
         {/* Frontend */}
-        <SkillsContent>
+        <SkillsWrapper>
           <SkillsHeader>
             <SkillsIcon>
               <FaCode />
@@ -71,10 +71,10 @@ const Skills = () => {
               <SkillsBar max="100" value="80" />
             </SkillsData>
           </SkillsList>
-        </SkillsContent>
+        </SkillsWrapper>
 
         {/* Backend */}
-        <SkillsContent>
+        <SkillsWrapper>
           <SkillsHeader>
             <SkillsIcon>
               <FaCode />
@@ -110,7 +110,7 @@ const Skills = () => {
               <SkillsBar max="100" value="80"></SkillsBar>
             </SkillsData>
           </SkillsList>
-        </SkillsContent>
+        </SkillsWrapper>
       </ContainerSkills>
     </Section>
   );

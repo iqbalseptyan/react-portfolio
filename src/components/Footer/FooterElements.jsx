@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Container, Grid } from "../GlobalElements";
+import { device } from "../MediaQueries";
 
 export const FooterSection = styled.footer`
   padding: 2rem 0 4rem;
@@ -10,13 +11,19 @@ export const ContainerFooter = styled(Container)`
 `;
 
 export const FooterWrapper = styled(Grid)`
-  row-gap: 1rem;
+  @media ${device.mobileM} {
+    row-gap: var(--mb-1);
+  }
 `;
 
 export const FooterTitle = styled.h1`
   font-size: var(--h1-font-size);
   /* margin-bottom: var(--mb-0-25); */
   text-align: center;
+
+  @media ${device.mobileM} {
+    font-size: var(--h3-font-size);
+  }
 `;
 
 export const FooterSubtitle = styled.small`
@@ -24,6 +31,10 @@ export const FooterSubtitle = styled.small`
   margin-bottom: var(--mb-3);
   text-align: center;
   font-size: var(--small-font-size);
+
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
+  }
 `;
 
 export const FooterLinkMenu = styled.ul`
@@ -33,6 +44,10 @@ export const FooterLinkMenu = styled.ul`
   list-style-type: none;
   justify-content: center;
   align-items: center;
+
+  @media ${device.mobileM} {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const FooterLinks = styled.li`
@@ -68,7 +83,11 @@ export const FooterIcon = styled.a`
 `;
 
 export const FooterCopyright = styled.div`
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   text-align: center;
   padding: 1rem;
+
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
+  }
 `;

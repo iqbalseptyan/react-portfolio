@@ -1,25 +1,45 @@
 import styled from "styled-components";
-import { Grid } from "../GlobalElements";
+import { Container, Grid } from "../GlobalElements";
+import { device } from "../MediaQueries";
 
-export const ContainerServices = styled(Grid)`
-  gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+export const ContainerServices = styled(Container)`
+  color: var(--black-color);
 `;
 
-export const ServicesContent = styled.div`
+export const ServicesWrapper = styled(Grid)`
+  grid-template-columns: repeat(2, 1fr);
+
+  @media ${device.mobileM} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
+export const ServicesCard = styled.div`
+  justify-self: center;
+  width: 250px;
+  height: 280px;
   position: relative;
   background-color: var(--white-color);
-  padding: 3.5rem 0.5rem 1.25rem 2.5rem;
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
+
+  @media ${device.mobileM} {
+    width: 200px;
+    justify-self: center;
+  }
+`;
+
+export const ServicesCardWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
 `;
 
 export const ServicesIcon = styled.div`
-  display: block;
   font-size: 1.5rem;
   color: var(--dark-purple-color);
   margin-bottom: var(--mb-1);
@@ -28,7 +48,11 @@ export const ServicesIcon = styled.div`
 export const ServicesTitle = styled.h1`
   width: 100px;
   word-wrap: break-word;
-  margin-bottom: var(--mb-0-5);
+  margin-bottom: var(--mb-1);
+
+  @media ${device.mobileM} {
+    font-size: var(--normal-font-size);
+  }
 `;
 
 export const ServicesModal = styled.div`
@@ -37,15 +61,19 @@ export const ServicesModal = styled.div`
   justify-content: center;
 `;
 
-export const ServicesModalContent = styled.div`
+export const ServicesModalWrapper = styled.div`
   position: relative;
   background-color: var(--white-color);
 `;
 
-export const ServicesModalTitle = styled.div`
+export const ServicesModalTitle = styled.h1`
   font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
   margin-bottom: var(--mb-1-5);
+
+  @media ${device.mobileM} {
+    font-size: var(--normal-font-size);
+  }
 `;
 
 export const ServicesModalClose = styled.div`
@@ -59,14 +87,17 @@ export const ServicesModalClose = styled.div`
 
 export const ServicesModalDetail = styled(Grid)`
   row-gap: 1rem;
-  margin: 0;
 `;
 
-export const ServicesModalList = styled.div`
+export const ServicesModalList = styled.p`
   display: flex;
   align-items: center;
   width: 300px;
   word-wrap: break-word;
+  font-weight: var(--font-medium);
+  @media ${device.mobileM} {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const ServicesModalIcon = styled.div`

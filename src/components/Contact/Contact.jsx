@@ -1,17 +1,18 @@
 import React from "react";
 import { Section, SectionSubtitle, SectionTitle } from "../GlobalElements";
 import {
-  ContactContent,
+  ContactInputs,
   ContactForm,
   ContactIcon,
-  ContactInputs,
   ContactLabel,
   ContactInput,
   ContainerContact,
   ContactTextArea,
+  ContactWrapper,
+  ContactWrapperForm,
 } from "./ContactElements";
 import mail from "../../images/mail.svg";
-import { Button, ButtonFlex, ButtonIcon } from "../ButtonElements";
+import { Button, ButtonFlex, ButtonIcon, ButtonText } from "../ButtonElements";
 import { FaArrowRight } from "react-icons/fa";
 
 const Contact = () => {
@@ -20,37 +21,37 @@ const Contact = () => {
       <SectionTitle>Contact</SectionTitle>
       <SectionSubtitle>Get in touch</SectionSubtitle>
       <ContainerContact>
-        <ContactIcon src={mail} />
-        <ContactForm>
-          <ContactInputs>
-            <ContactContent>
-              <ContactLabel>Name</ContactLabel>
-              <ContactInput />
-            </ContactContent>
-            <ContactContent>
-              <ContactLabel>Email</ContactLabel>
-              <ContactInput />
-            </ContactContent>
-            <ContactContent>
-              <ContactLabel>Subject</ContactLabel>
-              <ContactInput />
-            </ContactContent>
-            <ContactContent>
-              <ContactLabel>Description</ContactLabel>
-              <ContactTextArea rows="7" cols="0" />
-            </ContactContent>
-            <div>
+        <ContactWrapper>
+          <ContactIcon src={mail} />
+          <ContactForm>
+            <ContactWrapperForm>
+              <ContactInputs>
+                <ContactLabel>Name</ContactLabel>
+                <ContactInput />
+              </ContactInputs>
+              <ContactInputs>
+                <ContactLabel>Email</ContactLabel>
+                <ContactInput />
+              </ContactInputs>
+              <ContactInputs>
+                <ContactLabel>Subject</ContactLabel>
+                <ContactInput />
+              </ContactInputs>
+              <ContactInputs>
+                <ContactLabel>Description</ContactLabel>
+                <ContactTextArea rows="7" cols="0" />
+              </ContactInputs>
               <Button>
                 <ButtonFlex>
-                  Send Me
+                  <ButtonText>Send Me</ButtonText>
                   <ButtonIcon>
                     <FaArrowRight />
                   </ButtonIcon>
                 </ButtonFlex>
               </Button>
-            </div>
-          </ContactInputs>
-        </ContactForm>
+            </ContactWrapperForm>
+          </ContactForm>
+        </ContactWrapper>
       </ContainerContact>
     </Section>
   );

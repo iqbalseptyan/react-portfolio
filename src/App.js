@@ -13,8 +13,8 @@ import Skills from "./components/Skills/Skills";
 function App() {
   return (
     <>
-      <Hero />
       <Navbar />
+      <Hero />
       <Home />
       <About />
       <Skills />

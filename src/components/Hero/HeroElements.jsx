@@ -3,7 +3,8 @@ import { Container } from "../GlobalElements";
 import { device } from "../MediaQueries";
 
 export const ContainerHero = styled(Container)`
-  padding: 2rem;
+  /* padding: 2rem; */
+  margin-top: 2rem;
 `;
 
 export const ImgWrapper = styled.div`

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Container, Grid } from "../GlobalElements";
 import { ReactComponent as Blob } from "../../images/iqbal.svg";
+import { device } from "../MediaQueries";
+
 export const HomeContainer = styled(Container, Grid)`
   gap: 1rem;
 `;
@@ -29,6 +31,9 @@ export const BlobImg = styled(Blob)`
   fill: var(--dark-purple-color);
   height: 100%;
   width: 200px;
+  @media ${device.mobileM} {
+    width: 200px;
+  }
 `;
 
 export const HomeData = styled.div`
@@ -37,15 +42,27 @@ export const HomeData = styled.div`
 
 export const HomeTitle = styled.h1`
   font-size: var(--big-font-size);
+
+  @media ${device.mobileM} {
+    font-size: var(--h1-font-size);
+  }
 `;
 
 export const HomeSubtitle = styled.h3`
   font-size: var(--h3-font-size);
   color: var(--grey-color);
   font-weight: var(--font-medium);
+
+  @media ${device.mobileM} {
+    font-size: var(--normal-font-size);
+  }
 `;
 
 export const HomeDescription = styled.p`
   color: var(--grey-color);
   margin-bottom: var(--mb-2);
+
+  @media ${device.mobileM} {
+    font-size: var(--small-font-size);
+  }
 `;
