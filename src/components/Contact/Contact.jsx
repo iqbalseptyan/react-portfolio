@@ -1,7 +1,7 @@
 import React from "react";
 import { Section, SectionSubtitle, SectionTitle } from "../GlobalElements";
 import {
-  ContactInputs,
+  ContactName,
   ContactForm,
   ContactIcon,
   ContactLabel,
@@ -10,6 +10,10 @@ import {
   ContactTextArea,
   ContactWrapper,
   ContactWrapperForm,
+  ContactIconWrapper,
+  ContactEmail,
+  ContactSubject,
+  ContactDescription,
 } from "./ContactElements";
 import mail from "../../images/mail.svg";
 import { Button, ButtonFlex, ButtonIcon, ButtonText } from "../ButtonElements";
@@ -22,25 +26,27 @@ const Contact = () => {
       <SectionSubtitle>Get in touch</SectionSubtitle>
       <ContainerContact>
         <ContactWrapper>
-          <ContactIcon src={mail} />
+          <ContactIconWrapper>
+            <ContactIcon src={mail} />
+          </ContactIconWrapper>
           <ContactForm>
             <ContactWrapperForm>
-              <ContactInputs>
+              <ContactName>
                 <ContactLabel>Name</ContactLabel>
                 <ContactInput />
-              </ContactInputs>
-              <ContactInputs>
+              </ContactName>
+              <ContactEmail>
                 <ContactLabel>Email</ContactLabel>
                 <ContactInput />
-              </ContactInputs>
-              <ContactInputs>
+              </ContactEmail>
+              <ContactSubject>
                 <ContactLabel>Subject</ContactLabel>
                 <ContactInput />
-              </ContactInputs>
-              <ContactInputs>
+              </ContactSubject>
+              <ContactDescription>
                 <ContactLabel>Description</ContactLabel>
                 <ContactTextArea rows="7" cols="0" />
-              </ContactInputs>
+              </ContactDescription>
               <Button>
                 <ButtonFlex>
                   <ButtonText>Send Me</ButtonText>

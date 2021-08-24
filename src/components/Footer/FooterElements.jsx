@@ -21,6 +21,14 @@ export const FooterTitle = styled.h1`
   /* margin-bottom: var(--mb-0-25); */
   text-align: center;
 
+  @media ${device.tablet} {
+    font-size: var(--h1-font-size);
+  }
+
+  @media ${device.mobileL} {
+    font-size: var(--h2-font-size);
+  }
+
   @media ${device.mobileM} {
     font-size: var(--h3-font-size);
   }
@@ -30,7 +38,15 @@ export const FooterSubtitle = styled.small`
   display: block;
   margin-bottom: var(--mb-3);
   text-align: center;
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
+
+  @media ${device.mobileL} {
+    font-size: var(--small-font-size);
+  }
 
   @media ${device.mobileM} {
     font-size: var(--smaller-font-size);
@@ -44,6 +60,14 @@ export const FooterLinkMenu = styled.ul`
   list-style-type: none;
   justify-content: center;
   align-items: center;
+
+  @media ${device.tablet} {
+    font-size: var(--h3-font-size);
+  }
+
+  @media ${device.mobileL} {
+    font-size: var(--normal-font-size);
+  }
 
   @media ${device.mobileM} {
     font-size: var(--small-font-size);
@@ -80,12 +104,31 @@ export const FooterIcon = styled.a`
   &:hover {
     color: var(--dark-purple-color);
   }
+
+  @media ${device.tablet} {
+    font-size: var(--h1-font-size);
+  }
+
+  @media ${device.mobileL} {
+    font-size: var(--h2-font-size);
+  }
+
+  @media ${device.mobileM} {
+    font-size: var(--h3-font-size);
+  }
 `;
 
-export const FooterCopyright = styled.div`
+export const FooterCopyright = styled.small`
   font-size: var(--small-font-size);
   text-align: center;
-  padding: 1rem;
+
+  @media ${device.tablet} {
+    font-size: var(--small-font-size);
+  }
+
+  @media ${device.mobileL} {
+    font-size: var(--small-font-size);
+  }
 
   @media ${device.mobileM} {
     font-size: var(--smaller-font-size);

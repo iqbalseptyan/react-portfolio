@@ -30,14 +30,19 @@ export const HeroContent = styled.div`
   transform: translate(-50%, 250%);
   transition: 0.3s;
 
-  @media screen and (${device.tablet}) {
+  @media (max-width: 698px) {
     transition: 0.3s;
-    transform: translate(-50%, 70%);
+    transform: translate(-50%, 100%);
+  }
+
+  @media (max-width: 568px) {
+    transition: 0.3s;
+    transform: translate(-50%, 80%);
   }
 
   @media ${device.mobileL} {
     transition: 0.3s;
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 50%);
   }
 
   @media ${device.mobileM} {
@@ -47,16 +52,37 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: var(--h1-font-size);
+  font-size: var(--big-font-size);
   color: var(--purple-color);
+  font-weight: var(--font-semi-bold);
+
+  @media ${device.tablet} {
+    font-size: var(--h1-font-size);
+  }
+
+  @media ${device.mobileL} {
+    font-size: var(--h2-font-size);
+  }
 
   @media ${device.mobileM} {
     font-size: var(--h3-font-size);
   }
 `;
 
-export const HeroSubtitle = styled.small`
-  font-size: var(--small-font-size);
+export const HeroSubtitle = styled.p`
+  font-size: var(--normal-font-size);
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
+
+  @media ${device.mobileL} {
+    font-size: var(--small-font-size);
+  }
+
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
+  }
 `;
 
 export const HeroImg = styled.img`

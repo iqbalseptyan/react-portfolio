@@ -6,15 +6,14 @@ import {
   ServicesCard,
   ServicesCardWrapper,
   ServicesIcon,
-  ServicesModal,
   ServicesModalClose,
   ServicesModalWrapper,
-  ServicesModalDetail,
   ServicesModalIcon,
   ServicesModalList,
   ServicesModalTitle,
   ServicesTitle,
   ServicesWrapper,
+  ServicesModalText,
 } from "./ServicesElements";
 import {
   FaArrowRight,
@@ -33,7 +32,9 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    backgroundColor: "var(--white-color)",
+    padding: "0",
+    width: "max-content",
+    border: "2px solid rgb(204, 204, 204)",
   },
 };
 
@@ -90,7 +91,7 @@ const Services = () => {
               <ServicesTitle>Backend Developer</ServicesTitle>
               <Button bgTransparent onClick={openModalBE}>
                 <ButtonFlex>
-                  View More
+                  <ButtonText>View More</ButtonText>
                   <ButtonIcon>
                     <FaArrowRight />
                   </ButtonIcon>
@@ -108,34 +109,30 @@ const Services = () => {
         style={customStyles}
         contentLabel="Frontend Modal"
       >
-        <ServicesModal>
-          <ServicesModalWrapper>
-            <ServicesModalTitle>Frontend Developer</ServicesModalTitle>
-            <ServicesModalClose onClick={closeModalFE}>
-              <MdClose />
-            </ServicesModalClose>
-            <ServicesModalDetail>
-              <ServicesModalList>
-                <ServicesModalIcon>
-                  <FaRegCheckCircle />
-                </ServicesModalIcon>
-                Develop user interface
-              </ServicesModalList>
-              <ServicesModalList>
-                <ServicesModalIcon>
-                  <FaRegCheckCircle />
-                </ServicesModalIcon>
-                Create ux element interactions
-              </ServicesModalList>
-              <ServicesModalList>
-                <ServicesModalIcon>
-                  <FaRegCheckCircle />
-                </ServicesModalIcon>
-                Web page development
-              </ServicesModalList>
-            </ServicesModalDetail>
-          </ServicesModalWrapper>
-        </ServicesModal>
+        <ServicesModalWrapper>
+          <ServicesModalTitle>Frontend Developer</ServicesModalTitle>
+          <ServicesModalClose onClick={closeModalFE}>
+            <MdClose />
+          </ServicesModalClose>
+          <ServicesModalList>
+            <ServicesModalIcon>
+              <FaRegCheckCircle />
+            </ServicesModalIcon>
+            <ServicesModalText>Develop user interface</ServicesModalText>
+          </ServicesModalList>
+          <ServicesModalList>
+            <ServicesModalIcon>
+              <FaRegCheckCircle />
+            </ServicesModalIcon>
+            Create ux element interactions
+          </ServicesModalList>
+          <ServicesModalList>
+            <ServicesModalIcon>
+              <FaRegCheckCircle />
+            </ServicesModalIcon>
+            Web page development
+          </ServicesModalList>
+        </ServicesModalWrapper>
       </Modal>
 
       <Modal
@@ -145,34 +142,30 @@ const Services = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <ServicesModal>
-          <ServicesModalWrapper>
-            <ServicesModalTitle>Backend Developer</ServicesModalTitle>
-            <ServicesModalClose onClick={closeModalBE}>
-              <MdClose />
-            </ServicesModalClose>
-            <ServicesModalDetail>
-              <ServicesModalList>
-                <ServicesModalIcon>
-                  <FaRegCheckCircle />
-                </ServicesModalIcon>
-                Development server, application and database
-              </ServicesModalList>
-              <ServicesModalList>
-                <ServicesModalIcon>
-                  <FaRegCheckCircle />
-                </ServicesModalIcon>
-                Create API
-              </ServicesModalList>
-              <ServicesModalList>
-                <ServicesModalIcon>
-                  <FaRegCheckCircle />
-                </ServicesModalIcon>
-                Web page development
-              </ServicesModalList>
-            </ServicesModalDetail>
-          </ServicesModalWrapper>
-        </ServicesModal>
+        <ServicesModalWrapper>
+          <ServicesModalTitle>Backend Developer</ServicesModalTitle>
+          <ServicesModalClose onClick={closeModalBE}>
+            <MdClose />
+          </ServicesModalClose>
+          <ServicesModalList>
+            <ServicesModalIcon>
+              <FaRegCheckCircle />
+            </ServicesModalIcon>
+            Development server, application and database
+          </ServicesModalList>
+          <ServicesModalList>
+            <ServicesModalIcon>
+              <FaRegCheckCircle />
+            </ServicesModalIcon>
+            Create API
+          </ServicesModalList>
+          <ServicesModalList>
+            <ServicesModalIcon>
+              <FaRegCheckCircle />
+            </ServicesModalIcon>
+            Web page development
+          </ServicesModalList>
+        </ServicesModalWrapper>
       </Modal>
     </Section>
   );

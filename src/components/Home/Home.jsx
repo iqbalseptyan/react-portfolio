@@ -1,8 +1,6 @@
 import React from "react";
 import { Section } from "../GlobalElements";
 import {
-  HomeContainer,
-  HomeContent,
   HomeData,
   HomeDescription,
   HomeLinks,
@@ -10,6 +8,8 @@ import {
   HomeSubtitle,
   HomeTitle,
   BlobImg,
+  ContainerHome,
+  HomeWrapper,
 } from "./HomeElements";
 import { FaArrowRight, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button, ButtonFlex, ButtonIcon, ButtonText } from "../ButtonElements";
@@ -19,8 +19,8 @@ const Home = () => {
   return (
     <>
       <Section>
-        <HomeContainer>
-          <HomeContent>
+        <ContainerHome>
+          <HomeWrapper>
             <HomeSocial>
               <HomeLinks href="https://github.com/iqbalseptyan" target="_blank">
                 <FaGithub />
@@ -49,8 +49,8 @@ const Home = () => {
                 </ButtonFlex>
               </Button>
             </HomeData>
-          </HomeContent>
-        </HomeContainer>
+          </HomeWrapper>
+        </ContainerHome>
       </Section>
     </>
   );

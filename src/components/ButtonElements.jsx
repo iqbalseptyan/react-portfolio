@@ -20,8 +20,13 @@ export const Button = styled.button`
 `;
 
 export const ButtonText = styled.span`
+  width: max-content;
+
   @media ${device.mobileM} {
-    width: max-content;
+    font-size: var(--small-font-size);
+  }
+
+  @media ${device.mobileM} {
     font-size: var(--smaller-font-size);
   }
 `;

@@ -32,14 +32,30 @@ export const SkillArrowIcon = styled(SkillsIcon)`
 export const SkillsTitle = styled.h1`
   font-size: var(--h1-font-size);
 
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
+    font-size: var(--h2-font-size);
+  }
+
+  @media ${device.mobileL} {
     font-size: var(--h3-font-size);
+  }
+
+  @media ${device.mobileM} {
+    font-size: var(--normal-font-size);
   }
 `;
 
 export const SkillsSubTitle = styled.p`
   font-size: var(--small-font-size);
   color: var(--grey-color);
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
+
+  @media ${device.mobileL} {
+    font-size: var(--small-font-size);
+  }
 
   @media ${device.mobileM} {
     font-size: var(--smaller-font-size);
@@ -51,7 +67,7 @@ export const SkillsList = styled(Grid)`
   height: ${(props) => (props.open ? 0 : "max-content")};
   overflow: auto;
 
-  @media ${device.mobileM} {
+  @media ${device.mobileL} {
     margin-bottom: 0;
   }
 `;
@@ -69,20 +85,36 @@ export const SkillsTitles = styled.div`
 `;
 
 export const SkillsName = styled.h1`
-  font-size: var(--normal-font-size);
+  font-size: var(--h1-font-size);
   font-weight: var(--font-medium);
 
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
+
+  @media ${device.mobileL} {
     font-size: var(--small-font-size);
+  }
+
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
   }
 `;
 
 export const SkillsNumber = styled.h1`
-  font-size: var(--normal-font-size);
+  font-size: var(--h1-font-size);
   font-weight: var(--font-medium);
 
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
+
+  @media ${device.mobileL} {
     font-size: var(--small-font-size);
+  }
+
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
   }
 `;
 

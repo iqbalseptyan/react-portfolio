@@ -1,0 +1,13 @@
+.swiper-container {
+  z-index: 0;
+}
+
+/* html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--white-color);
+} */
