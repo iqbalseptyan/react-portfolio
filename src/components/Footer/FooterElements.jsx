@@ -9,6 +9,7 @@ export const FooterSection = styled.footer`
 
 export const ContainerFooter = styled(Container)`
   color: var(--white-color);
+  background-color: var(--dark-purple-color);
 `;
 
 export const FooterWrapper = styled.div`

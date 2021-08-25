@@ -21,7 +21,6 @@ import {
 import { MdApps, MdClose, MdMessage } from "react-icons/md";
 
 const Navbar = () => {
-  // toggle menu
   const [toggle, setToggle] = useState(false);
 
   return (

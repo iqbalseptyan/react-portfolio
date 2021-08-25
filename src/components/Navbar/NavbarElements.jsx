@@ -1,37 +1,44 @@
 import styled from "styled-components";
-import { Container, Grid } from "../GlobalElements";
+import { Container } from "../GlobalElements";
 import { device } from "../MediaQueries";
 
 export const Header = styled(Container)`
   display: flex;
-  align-items: center;
   position: fixed;
   z-index: var(--z-fixed);
-  right: 0;
-  left: 0;
-  background-color: var(--white-color);
-  /* box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15); */
-  /* box-shadow: 0 1px rgba(0, 0, 0, 0.15); */
 
-  top: 0;
-  /* margin: 0; */
-  max-height: 1366px;
-  padding: var(--mb-2);
-  height: var(--header-height-laptop);
-
-  @media (max-width: 1023px) {
+  @media ${device.tablet} {
+    height: var(--header-height);
+    padding: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @media ${device.laptop} {
+    max-width: 1366px;
+    height: var(--header-height-laptop);
+    top: 0;
+    bottom: unset;
   }
 `;
 
 export const Nav = styled.nav`
-  height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: inherit;
-  /* border: 2px solid green; */
+
+  @media ${device.tablet} {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+
+  @media ${device.laptop} {
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+  }
 `;
 
 export const NavLogo = styled.a`
@@ -42,6 +49,10 @@ export const NavLogo = styled.a`
   font-weight: var(--font-semi-bold);
   &:hover {
     color: var(--dark-purple-color);
+  }
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
   }
 
   @media ${device.laptop} {
@@ -56,14 +67,17 @@ export const NavMenu = styled.ul`
   width: 50%;
 
   @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--mb-1);
     position: fixed;
-    left: 0;
-    width: 100%;
+    width: inherit;
     background-color: var(--white-color);
-    padding: 2rem 1.5rem 4rem;
+    padding: 2rem 2rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1rem 1rem 0 0;
     transition: 0.3s;
+    left: 0;
     bottom: ${(props) => (props.show ? 0 : "-100%")};
   }
 
@@ -74,20 +88,6 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   display: inline;
-`;
-
-export const NavGridList = styled(Grid)`
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-
-  @media ${device.laptop} {
-    column-gap: 0;
-    grid-template-columns: auto auto auto auto;
-  }
-
-  @media ${device.mobileM} {
-    column-gap: 0;
-  }
 `;
 
 export const NavLinks = styled(NavLogo)`
