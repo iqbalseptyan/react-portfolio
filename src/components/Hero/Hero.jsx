@@ -6,6 +6,7 @@ import {
   HeroShadow,
   HeroSubtitle,
   HeroTitle,
+  HeroWrapper,
   ImgWrapper,
 } from "./HeroElements";
 import hero from "../../images/hero.png";
@@ -13,14 +14,16 @@ import hero from "../../images/hero.png";
 const Hero = () => {
   return (
     <ContainerHero>
-      <ImgWrapper>
-        <HeroShadow />
-        <HeroImg src={hero} />
+      <HeroWrapper>
+        <ImgWrapper>
+          <HeroImg src={hero} />
+          <HeroShadow />
+        </ImgWrapper>
         <HeroContent>
           <HeroTitle>Web and Mobile developer</HeroTitle>
           <HeroSubtitle>Frontend Developer</HeroSubtitle>
         </HeroContent>
-      </ImgWrapper>
+      </HeroWrapper>
     </ContainerHero>
   );
 };

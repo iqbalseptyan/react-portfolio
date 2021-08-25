@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { device } from "./MediaQueries";
 
 export const Container = styled.div`
-  margin: auto;
   background-color: var(--white-color);
+  margin: auto;
 
   @media ${device.laptop} {
-    max-width: 1366px;
+    max-width: 1024px;
   }
 `;
 

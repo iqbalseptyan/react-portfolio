@@ -8,19 +8,29 @@ export const ContainerHero = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+
+  @media ${device.tablet} {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
 
   @media ${device.laptop} {
     margin-top: var(--header-height-laptop);
-    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
   }
+`;
+
+export const HeroWrapper = styled.div`
+  position: relative;
+  text-align: center;
+  color: var(--white-color);
 `;
 
 export const ImgWrapper = styled.div`
   position: relative;
   text-align: center;
-  color: white;
+  color: var(--white-color);
 `;
 
 export const HeroShadow = styled.div`
@@ -31,6 +41,7 @@ export const HeroShadow = styled.div`
   height: 98.5%;
   opacity: 0.75;
   position: absolute;
+  top: 0;
 `;
 
 export const HeroContent = styled.div`
@@ -39,70 +50,55 @@ export const HeroContent = styled.div`
   left: 50%;
   transition: 0.3s;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     transition: 0.3s;
     transform: translate(-50%, 250%);
   }
 
-  @media (max-width: 698px) {
+  @media ${device.laptop} {
     transition: 0.3s;
-    transform: translate(-50%, 100%);
-  }
-
-  @media (max-width: 568px) {
-    transition: 0.3s;
-    transform: translate(-50%, 80%);
-  }
-
-  @media ${device.mobileL} {
-    transition: 0.3s;
-    transform: translate(-50%, 50%);
-  }
-
-  @media ${device.mobileM} {
-    transition: 0.3s;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 370%);
   }
 `;
 
 export const HeroTitle = styled.h1`
   color: var(--purple-color);
   font-weight: var(--font-semi-bold);
+  @media ${device.mobileM} {
+    font-size: var(--h3-font-size);
+  }
 
-  @media ${device.laptop} {
-    font-size: var(--big-font-size);
+  @media ${device.mobileL} {
+    font-size: var(--h2-font-size);
   }
 
   @media ${device.tablet} {
     font-size: var(--h1-font-size);
   }
 
-  @media ${device.mobileL} {
-    font-size: var(--h2-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--h3-font-size);
+  @media ${device.laptop} {
+    font-size: var(--big-font-size);
   }
 `;
 
 export const HeroSubtitle = styled.p`
   font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
 
-  @media ${device.laptop} {
-    font-size: var(--h2-font-size);
-  }
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
   }
 
   @media ${device.mobileL} {
     font-size: var(--small-font-size);
   }
 
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
+
+  @media ${device.laptop} {
+    font-size: var(--h2-font-size);
   }
 `;
 
@@ -138,5 +134,3 @@ export const HeroName = styled.div`
 export const HeroArrow = styled.div`
   font-size: 1.25rem;
 `;
-
-export const ButtonFlex = styled.div``;

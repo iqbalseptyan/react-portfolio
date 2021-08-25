@@ -15,14 +15,14 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Home />
+      {/* <Home />
       <About />
       <Skills />
       <Services />
       <Portfolio />
       <Contact />
       <Footer />
-      <Scrolltop />
+      <Scrolltop /> */}
     </>
   );
 }
