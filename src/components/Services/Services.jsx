@@ -124,13 +124,15 @@ const Services = () => {
             <ServicesModalIcon>
               <FaRegCheckCircle />
             </ServicesModalIcon>
-            Create ux element interactions
+            <ServicesModalText>
+              Create ux element interactions
+            </ServicesModalText>
           </ServicesModalList>
           <ServicesModalList>
             <ServicesModalIcon>
               <FaRegCheckCircle />
             </ServicesModalIcon>
-            Web page development
+            <ServicesModalText>Web page development</ServicesModalText>
           </ServicesModalList>
         </ServicesModalWrapper>
       </Modal>
@@ -151,19 +153,21 @@ const Services = () => {
             <ServicesModalIcon>
               <FaRegCheckCircle />
             </ServicesModalIcon>
-            Development server, application and database
+            <ServicesModalText>
+              Development server, application and database
+            </ServicesModalText>
           </ServicesModalList>
           <ServicesModalList>
             <ServicesModalIcon>
               <FaRegCheckCircle />
             </ServicesModalIcon>
-            Create API
+            <ServicesModalText>Create API</ServicesModalText>
           </ServicesModalList>
           <ServicesModalList>
             <ServicesModalIcon>
               <FaRegCheckCircle />
             </ServicesModalIcon>
-            Web page development
+            <ServicesModalText>Web page development</ServicesModalText>
           </ServicesModalList>
         </ServicesModalWrapper>
       </Modal>

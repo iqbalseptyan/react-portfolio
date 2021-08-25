@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Container, Grid } from "../GlobalElements";
 import {
   Header,
   Nav,
@@ -7,10 +6,10 @@ import {
   NavIcon,
   NavItem,
   NavLinks,
-  NavGridList,
   NavLogo,
   NavMenu,
   NavToggle,
+  NavText,
 } from "./NavbarElements";
 import {
   FaBriefcase,
@@ -27,71 +26,65 @@ const Navbar = () => {
 
   return (
     <Header>
-      <Container>
-        <Nav>
-          <NavLogo>Iqbal Septyan</NavLogo>
-          <NavMenu show={toggle}>
-            <Grid>
-              <NavGridList>
-                <NavItem>
-                  <NavLinks>
-                    <NavIcon>
-                      <FaHome />
-                    </NavIcon>
-                    Home
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks>
-                    <NavIcon>
-                      <FaUser />
-                    </NavIcon>
-                    About
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks>
-                    <NavIcon>
-                      <FaFileAlt />
-                    </NavIcon>
-                    Skills
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks>
-                    <NavIcon>
-                      <FaBriefcase />
-                    </NavIcon>
-                    Services
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks>
-                    <NavIcon>
-                      <FaFileImage />
-                    </NavIcon>
-                    Portfolio
-                  </NavLinks>
-                </NavItem>
-                <NavItem>
-                  <NavLinks>
-                    <NavIcon>
-                      <MdMessage />
-                    </NavIcon>
-                    Contact
-                  </NavLinks>
-                </NavItem>
-                <NavClose onClick={() => setToggle(false)}>
-                  <MdClose />
-                </NavClose>
-              </NavGridList>
-            </Grid>
-          </NavMenu>
-          <NavToggle onClick={() => setToggle(true)}>
-            <MdApps />
-          </NavToggle>
-        </Nav>
-      </Container>
+      <Nav>
+        <NavLogo>Iqbal Septyan</NavLogo>
+        <NavMenu show={toggle}>
+          <NavItem>
+            <NavLinks>
+              <NavIcon>
+                <FaHome />
+              </NavIcon>
+              <NavText>Home</NavText>
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks>
+              <NavIcon>
+                <FaUser />
+              </NavIcon>
+              <NavText>About</NavText>
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks>
+              <NavIcon>
+                <FaFileAlt />
+              </NavIcon>
+              <NavText>Skills</NavText>
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks>
+              <NavIcon>
+                <FaBriefcase />
+              </NavIcon>
+              <NavText>Services</NavText>
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks>
+              <NavIcon>
+                <FaFileImage />
+              </NavIcon>
+              <NavText>Portfolio</NavText>
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks>
+              <NavIcon>
+                <MdMessage />
+              </NavIcon>
+              <NavText>Contact</NavText>
+            </NavLinks>
+          </NavItem>
+          <NavClose onClick={() => setToggle(false)}>
+            <MdClose />
+          </NavClose>
+        </NavMenu>
+        <NavToggle onClick={() => setToggle(true)}>
+          <MdApps />
+        </NavToggle>
+      </Nav>
     </Header>
   );
 };

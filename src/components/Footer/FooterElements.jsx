@@ -1,19 +1,29 @@
 import styled from "styled-components";
-import { Container, Grid } from "../GlobalElements";
+import { Container } from "../GlobalElements";
 import { device } from "../MediaQueries";
 
 export const FooterSection = styled.footer`
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 2rem;
+  background-color: var(--dark-purple-color);
 `;
 
 export const ContainerFooter = styled(Container)`
-  color: var(--black-color);
+  color: var(--white-color);
 `;
 
-export const FooterWrapper = styled(Grid)`
+export const FooterWrapper = styled.div`
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: auto auto;
   @media ${device.mobileM} {
     row-gap: var(--mb-1);
   }
+`;
+
+export const GridItem = styled.div`
+  text-align: center;
 `;
 
 export const FooterTitle = styled.h1`
@@ -36,11 +46,12 @@ export const FooterTitle = styled.h1`
 
 export const FooterSubtitle = styled.small`
   display: block;
-  margin-bottom: var(--mb-3);
+
   text-align: center;
   font-size: var(--normal-font-size);
 
   @media ${device.tablet} {
+    margin-bottom: var(--mb-3);
     font-size: var(--normal-font-size);
   }
 
@@ -54,12 +65,12 @@ export const FooterSubtitle = styled.small`
 `;
 
 export const FooterLinkMenu = styled.ul`
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-  list-style-type: none;
-  justify-content: center;
+  /* display: flex;
+  flex-direction: column; */
+  /* row-gap: 1rem; */
+  /* justify-content: center; */
   align-items: center;
+  columns: 3;
 
   @media ${device.tablet} {
     font-size: var(--h3-font-size);
@@ -82,15 +93,15 @@ export const FooterLinks = styled.li`
 export const FooterLink = styled.a`
   cursor: pointer;
   &:hover {
-    color: var(--dark-purple-color);
+    color: var(--dark-color);
   }
 `;
 
 export const FooterSocials = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 2rem 4rem;
+  justify-content: space-between;
+  padding: 2rem 0;
 `;
 
 export const FooterSocial = styled.div`
@@ -99,10 +110,10 @@ export const FooterSocial = styled.div`
 
 export const FooterIcon = styled.a`
   cursor: pointer;
-  color: var(--black-color);
+  color: var(--white-color);
 
   &:hover {
-    color: var(--dark-purple-color);
+    color: var(--dark-color);
   }
 
   @media ${device.tablet} {
@@ -121,7 +132,6 @@ export const FooterIcon = styled.a`
 export const FooterCopyright = styled.small`
   font-size: var(--small-font-size);
   text-align: center;
-
   @media ${device.tablet} {
     font-size: var(--small-font-size);
   }

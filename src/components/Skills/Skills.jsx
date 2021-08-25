@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Section, SectionSubtitle, SectionTitle } from "../GlobalElements";
+import {
+  GridCol1,
+  GridCol2,
+  Section,
+  SectionSubtitle,
+  SectionTitle,
+} from "../GlobalElements";
 import {
   ContainerSkills,
   SkillArrowIcon,
@@ -27,89 +33,91 @@ const Skills = () => {
       <SectionSubtitle>Technical</SectionSubtitle>
 
       <ContainerSkills>
-        {/* Frontend */}
         <SkillsWrapper>
-          <SkillsHeader>
-            <SkillsIcon>
-              <FaCode />
-            </SkillsIcon>
-            <div>
-              <SkillsTitle>Frontend Developer</SkillsTitle>
-              <SkillsSubTitle>More than 5 years</SkillsSubTitle>
-            </div>
-            <SkillArrowIcon onClick={() => setOpenFrontEnd(!openFrontEnd)}>
-              <FaAngleDown />
-            </SkillArrowIcon>
-          </SkillsHeader>
-          <SkillsList open={openFrontEnd}>
-            <SkillsData>
-              <SkillsTitles>
-                <SkillsName>HTML</SkillsName>
-                <SkillsNumber>90%</SkillsNumber>
-              </SkillsTitles>
-              <SkillsBar max="100" value="90" />
-            </SkillsData>
-            <SkillsData>
-              <SkillsTitles>
-                <SkillsName>CSS</SkillsName>
-                <SkillsNumber>85%</SkillsNumber>
-              </SkillsTitles>
-              <SkillsBar max="100" value="85" />
-            </SkillsData>
-            <SkillsData>
-              <SkillsTitles>
-                <SkillsName>Javascript</SkillsName>
-                <SkillsNumber>80%</SkillsNumber>
-              </SkillsTitles>
-              <SkillsBar max="100" value="80" />
-            </SkillsData>
-            <SkillsData>
-              <SkillsTitles>
-                <SkillsName>React</SkillsName>
-                <SkillsNumber>80%</SkillsNumber>
-              </SkillsTitles>
-              <SkillsBar max="100" value="80" />
-            </SkillsData>
-          </SkillsList>
-        </SkillsWrapper>
+          {/* Frontend */}
+          <GridCol1>
+            <SkillsHeader>
+              <SkillsIcon>
+                <FaCode />
+              </SkillsIcon>
+              <div>
+                <SkillsTitle>Frontend Developer</SkillsTitle>
+                <SkillsSubTitle>More than 5 years</SkillsSubTitle>
+              </div>
+              <SkillArrowIcon onClick={() => setOpenFrontEnd(!openFrontEnd)}>
+                <FaAngleDown />
+              </SkillArrowIcon>
+            </SkillsHeader>
+            <SkillsList open={openFrontEnd}>
+              <SkillsData>
+                <SkillsTitles>
+                  <SkillsName>HTML</SkillsName>
+                  <SkillsNumber>90%</SkillsNumber>
+                </SkillsTitles>
+                <SkillsBar max="100" value="90" />
+              </SkillsData>
+              <SkillsData>
+                <SkillsTitles>
+                  <SkillsName>CSS</SkillsName>
+                  <SkillsNumber>85%</SkillsNumber>
+                </SkillsTitles>
+                <SkillsBar max="100" value="85" />
+              </SkillsData>
+              <SkillsData>
+                <SkillsTitles>
+                  <SkillsName>Javascript</SkillsName>
+                  <SkillsNumber>80%</SkillsNumber>
+                </SkillsTitles>
+                <SkillsBar max="100" value="80" />
+              </SkillsData>
+              <SkillsData>
+                <SkillsTitles>
+                  <SkillsName>React</SkillsName>
+                  <SkillsNumber>80%</SkillsNumber>
+                </SkillsTitles>
+                <SkillsBar max="100" value="80" />
+              </SkillsData>
+            </SkillsList>
+          </GridCol1>
 
-        {/* Backend */}
-        <SkillsWrapper>
-          <SkillsHeader>
-            <SkillsIcon>
-              <FaCode />
-            </SkillsIcon>
-            <div>
-              <SkillsTitle>Backend Developer</SkillsTitle>
-              <SkillsSubTitle>More than 4 years</SkillsSubTitle>
-            </div>
-            <SkillArrowIcon onClick={() => setOpenBackEnd(!openBackEnd)}>
-              <FaAngleDown />
-            </SkillArrowIcon>
-          </SkillsHeader>
-          <SkillsList open={!openBackEnd}>
-            <SkillsData>
-              <SkillsTitles>
-                <SkillsName>PHP</SkillsName>
-                <SkillsNumber>80%</SkillsNumber>
-              </SkillsTitles>
-              <SkillsBar max="100" value="80"></SkillsBar>
-            </SkillsData>
-            <SkillsData>
-              <SkillsTitles>
-                <SkillsName>NodeJS</SkillsName>
-                <SkillsNumber>80%</SkillsNumber>
-              </SkillsTitles>
-              <SkillsBar max="100" value="80"></SkillsBar>
-            </SkillsData>
-            <SkillsData>
-              <SkillsTitles>
-                <SkillsName>Firebase</SkillsName>
-                <SkillsNumber>80%</SkillsNumber>
-              </SkillsTitles>
-              <SkillsBar max="100" value="80"></SkillsBar>
-            </SkillsData>
-          </SkillsList>
+          {/* Backend */}
+          <GridCol2>
+            <SkillsHeader>
+              <SkillsIcon>
+                <FaCode />
+              </SkillsIcon>
+              <div>
+                <SkillsTitle>Backend Developer</SkillsTitle>
+                <SkillsSubTitle>More than 4 years</SkillsSubTitle>
+              </div>
+              <SkillArrowIcon onClick={() => setOpenBackEnd(!openBackEnd)}>
+                <FaAngleDown />
+              </SkillArrowIcon>
+            </SkillsHeader>
+            <SkillsList open={!openBackEnd}>
+              <SkillsData>
+                <SkillsTitles>
+                  <SkillsName>PHP</SkillsName>
+                  <SkillsNumber>80%</SkillsNumber>
+                </SkillsTitles>
+                <SkillsBar max="100" value="80"></SkillsBar>
+              </SkillsData>
+              <SkillsData>
+                <SkillsTitles>
+                  <SkillsName>NodeJS</SkillsName>
+                  <SkillsNumber>80%</SkillsNumber>
+                </SkillsTitles>
+                <SkillsBar max="100" value="80"></SkillsBar>
+              </SkillsData>
+              <SkillsData>
+                <SkillsTitles>
+                  <SkillsName>Firebase</SkillsName>
+                  <SkillsNumber>80%</SkillsNumber>
+                </SkillsTitles>
+                <SkillsBar max="100" value="80"></SkillsBar>
+              </SkillsData>
+            </SkillsList>
+          </GridCol2>
         </SkillsWrapper>
       </ContainerSkills>
     </Section>

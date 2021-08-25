@@ -51,11 +51,12 @@ export const ServicesIcon = styled.div`
 `;
 
 export const ServicesTitle = styled.h1`
-  width: 120px;
+  font-size: var(--h1-font-size);
   word-wrap: break-word;
   margin-bottom: var(--mb-1);
 
   @media ${device.tablet} {
+    width: 120px;
     font-size: var(--h2-font-size);
   }
 
@@ -71,13 +72,17 @@ export const ServicesTitle = styled.h1`
 export const ServicesModalWrapper = styled.div`
   padding: var(--mb-2);
   background-color: (--white-color);
-  max-width: 420px;
+  width: max-content;
 `;
 
 export const ServicesModalTitle = styled.h1`
-  font-size: var(--h3-font-size);
+  font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: var(--mb-1-5);
+
+  @media ${device.tablet} {
+    font-size: var(--h3-font-size);
+  }
 
   @media ${device.mobileM} {
     font-size: var(--normal-font-size);
@@ -100,19 +105,15 @@ export const ServicesModalClose = styled.div`
 export const ServicesModalList = styled.div`
   display: flex;
   align-items: center;
-
   margin-bottom: var(--mb-1-5);
   font-weight: var(--font-medium);
-
-  @media ${device.mobileM} {
-    font-size: var(--small-font-size);
-  }
 `;
 
 export const ServicesModalIcon = styled.div`
   display: flex;
   color: var(--black-color);
   margin-right: var(--mb-0-5);
+  font-size: var(--h1-font-size);
 
   @media ${device.tablet} {
     font-size: var(--medium-font-size);
@@ -120,8 +121,9 @@ export const ServicesModalIcon = styled.div`
 `;
 
 export const ServicesModalText = styled.p`
+  width: 400px;
   word-wrap: break-word;
-
+  font-size: var(--h3-font-size);
   @media ${device.tablet} {
     font-size: var(--normal-font-size);
   }

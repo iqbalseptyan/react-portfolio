@@ -4,7 +4,17 @@ import { device } from "../MediaQueries";
 
 export const ContainerHero = styled(Container)`
   color: var(--white-color);
-  margin-top: 2rem;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media ${device.laptop} {
+    margin-top: var(--header-height-laptop);
+    max-width: 1024px;
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -27,8 +37,12 @@ export const HeroContent = styled.div`
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, 250%);
   transition: 0.3s;
+
+  @media ${device.laptop} {
+    transition: 0.3s;
+    transform: translate(-50%, 250%);
+  }
 
   @media (max-width: 698px) {
     transition: 0.3s;
@@ -52,9 +66,12 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: var(--big-font-size);
   color: var(--purple-color);
   font-weight: var(--font-semi-bold);
+
+  @media ${device.laptop} {
+    font-size: var(--big-font-size);
+  }
 
   @media ${device.tablet} {
     font-size: var(--h1-font-size);
@@ -71,6 +88,10 @@ export const HeroTitle = styled.h1`
 
 export const HeroSubtitle = styled.p`
   font-size: var(--normal-font-size);
+
+  @media ${device.laptop} {
+    font-size: var(--h2-font-size);
+  }
 
   @media ${device.tablet} {
     font-size: var(--normal-font-size);

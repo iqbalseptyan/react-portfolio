@@ -1,5 +1,11 @@
 import React, { useRef } from "react";
-import { Section, SectionSubtitle, SectionTitle } from "../GlobalElements";
+import {
+  GridCol1,
+  GridCol2,
+  Section,
+  SectionSubtitle,
+  SectionTitle,
+} from "../GlobalElements";
 import {
   PortfolioDescription,
   ContainerPortfolio,
@@ -51,64 +57,80 @@ const Portfolio = () => {
         >
           <SwiperSlide>
             <PortfolioWrapper>
-              <PortfolioImg src={image} />
-              <PortfolioData>
-                <PortfolioTitle>Modern Website</PortfolioTitle>
-                <PortfolioDescription>
-                  Website adoptable to all devices, with ui components and
-                  animated interactions
-                </PortfolioDescription>
-                <PortfolioLink>
-                  <Button>
-                    <ButtonFlex>
-                      Detail
-                      <ButtonIcon>
-                        <FaArrowRight />
-                      </ButtonIcon>
-                    </ButtonFlex>
-                  </Button>
-                </PortfolioLink>
-              </PortfolioData>
+              <GridCol1>
+                <PortfolioImg src={image} />
+              </GridCol1>
+              <GridCol2>
+                <PortfolioData>
+                  <PortfolioTitle>Modern Website</PortfolioTitle>
+                  <PortfolioDescription>
+                    Website adoptable to all devices, with ui components and
+                    animated interactions
+                  </PortfolioDescription>
+                  <PortfolioLink>
+                    <Button>
+                      <ButtonFlex>
+                        Detail
+                        <ButtonIcon>
+                          <FaArrowRight />
+                        </ButtonIcon>
+                      </ButtonFlex>
+                    </Button>
+                  </PortfolioLink>
+                </PortfolioData>
+              </GridCol2>
             </PortfolioWrapper>
           </SwiperSlide>
           <SwiperSlide>
             <PortfolioWrapper>
-              <PortfolioImg src={image} />
-              <PortfolioData>
-                <PortfolioTitle>Modern Website</PortfolioTitle>
-                <PortfolioDescription>
-                  Website adoptable to all devices, with ui components and
-                  animated interactions
-                </PortfolioDescription>
-                <Button>
-                  <ButtonFlex>
-                    Detail
-                    <ButtonIcon>
-                      <FaArrowRight />
-                    </ButtonIcon>
-                  </ButtonFlex>
-                </Button>
-              </PortfolioData>
+              <GridCol1>
+                <PortfolioImg src={image} />
+              </GridCol1>
+              <GridCol2>
+                <PortfolioData>
+                  <PortfolioTitle>Modern Website</PortfolioTitle>
+                  <PortfolioDescription>
+                    Website adoptable to all devices, with ui components and
+                    animated interactions
+                  </PortfolioDescription>
+                  <PortfolioLink>
+                    <Button>
+                      <ButtonFlex>
+                        Detail
+                        <ButtonIcon>
+                          <FaArrowRight />
+                        </ButtonIcon>
+                      </ButtonFlex>
+                    </Button>
+                  </PortfolioLink>
+                </PortfolioData>
+              </GridCol2>
             </PortfolioWrapper>
           </SwiperSlide>
           <SwiperSlide>
             <PortfolioWrapper>
-              <PortfolioImg src={image} />
-              <PortfolioData>
-                <PortfolioTitle>Modern Website</PortfolioTitle>
-                <PortfolioDescription>
-                  Website adoptable to all devices, with ui components and
-                  animated interactions
-                </PortfolioDescription>
-                <Button>
-                  <ButtonFlex>
-                    Detail
-                    <ButtonIcon>
-                      <FaArrowRight />
-                    </ButtonIcon>
-                  </ButtonFlex>
-                </Button>
-              </PortfolioData>
+              <GridCol1>
+                <PortfolioImg src={image} />
+              </GridCol1>
+              <GridCol2>
+                <PortfolioData>
+                  <PortfolioTitle>Modern Website</PortfolioTitle>
+                  <PortfolioDescription>
+                    Website adoptable to all devices, with ui components and
+                    animated interactions
+                  </PortfolioDescription>
+                  <PortfolioLink>
+                    <Button>
+                      <ButtonFlex>
+                        Detail
+                        <ButtonIcon>
+                          <FaArrowRight />
+                        </ButtonIcon>
+                      </ButtonFlex>
+                    </Button>
+                  </PortfolioLink>
+                </PortfolioData>
+              </GridCol2>
             </PortfolioWrapper>
           </SwiperSlide>
 

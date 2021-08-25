@@ -1,5 +1,6 @@
 .swiper-container {
   z-index: 0;
+  max-width: 1024px;
 }
 
 /* html {

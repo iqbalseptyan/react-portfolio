@@ -4,9 +4,11 @@ import { device } from "../MediaQueries";
 
 export const ContainerSkills = styled(Container)`
   color: var(--black-color);
+  height: min-content;
 `;
 
 export const SkillsWrapper = styled(Grid)`
+  grid-auto-columns: 1fr;
   @media ${device.mobileM} {
     gap: 0;
   }
@@ -46,12 +48,8 @@ export const SkillsTitle = styled.h1`
 `;
 
 export const SkillsSubTitle = styled.p`
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   color: var(--grey-color);
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
 
   @media ${device.mobileL} {
     font-size: var(--small-font-size);
@@ -63,6 +61,7 @@ export const SkillsSubTitle = styled.p`
 `;
 
 export const SkillsList = styled(Grid)`
+  grid-template-areas: "col1";
   margin-bottom: var(--mb-2-5);
   height: ${(props) => (props.open ? 0 : "max-content")};
   overflow: auto;
@@ -73,8 +72,6 @@ export const SkillsList = styled(Grid)`
 `;
 
 export const SkillsData = styled.div`
-  transition: 0.3s;
-
   color: var(--black-color);
 `;
 
@@ -85,7 +82,7 @@ export const SkillsTitles = styled.div`
 `;
 
 export const SkillsName = styled.h1`
-  font-size: var(--h1-font-size);
+  font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
 
   @media ${device.tablet} {
@@ -102,7 +99,7 @@ export const SkillsName = styled.h1`
 `;
 
 export const SkillsNumber = styled.h1`
-  font-size: var(--h1-font-size);
+  font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
 
   @media ${device.tablet} {
