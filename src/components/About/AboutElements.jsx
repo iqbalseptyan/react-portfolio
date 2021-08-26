@@ -4,8 +4,9 @@ import { device } from "../MediaQueries";
 
 export const ContainerAbout = styled(Container)`
   color: var(--black-color);
-  @media ${device.laptopL} {
-    max-width: 1366px;
+
+  @media ${device.tablet} {
+    max-width: 600px;
   }
 
   @media ${device.laptop} {
@@ -17,8 +18,11 @@ export const AboutWrapper = styled(Grid)`
   grid-template-areas: "col1 col2";
   grid-template-columns: 1fr 1fr;
 
-  @media (max-width: 1023px) {
-    row-gap: 2.5rem;
+  @media ${device.tablet} {
+    margin-top: var(--mb-2);
+    grid-template-areas:
+      "col1 col1"
+      "col2 col2";
   }
 `;
 
@@ -44,34 +48,33 @@ export const AboutImg = styled.img`
   margin: auto;
   alt: "Iqbal Septyan";
 
-  @media (max-width: 1023px) {
-    width: 200px;
+  @media ${device.tablet} {
+    width: 250px;
   }
 `;
 
 export const AboutDescription = styled.p`
   color: var(--grey-color);
   font-size: var(--h2-font-size);
-
   text-align: left;
-
-  @media ${device.tablet} {
-    text-align: center;
-    font-size: var(--h3-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--normal-font-size);
-  }
 
   @media ${device.mobileM} {
     font-size: var(--small-font-size);
+  }
+
+  @media ${device.tablet} {
+    text-align: center;
+    font-size: var(--normal-font-size);
   }
 `;
 
 export const AboutInfo = styled.div`
   display: flex;
   justify-content: space-evenly;
+
+  @media ${device.tablet} {
+    margin-top: var(--mb-2);
+  }
 `;
 
 export const AboutInfoWrapper = styled.div`
@@ -82,15 +85,15 @@ export const AboutInfoTitle = styled.h1`
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
 
-  @media ${device.tablet} {
-    font-size: var(--medium-font-size);
+  @media ${device.mobileM} {
+    font-size: var(--h2-font-size);
   }
 
   @media ${device.mobileL} {
     font-size: var(--h1-font-size);
   }
 
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
     font-size: var(--h2-font-size);
   }
 `;
@@ -101,15 +104,16 @@ export const AboutInfoSubTitle = styled.p`
   width: 120px;
   word-wrap: break-word;
 
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
+  @media ${device.mobileM} {
+    font-size: var(--smaller-font-size);
   }
 
   @media ${device.mobileL} {
     font-size: var(--small-font-size);
   }
 
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
+  @media ${device.tablet} {
+    font-size: var(--small-font-size);
+    width: 100px;
   }
 `;
