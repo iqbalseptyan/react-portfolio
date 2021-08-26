@@ -16,6 +16,11 @@ export const ContainerPortfolio = styled(Container)`
     height: 0.5rem;
     border-radius: 0.5rem;
   }
+
+  @media ${device.tablet} {
+    max-width: 600px;
+    margin-top: var(--mb-2);
+  }
 `;
 
 export const PortfolioWrapper = styled(Grid)`
@@ -24,12 +29,22 @@ export const PortfolioWrapper = styled(Grid)`
   @media ${device.mobileL} {
     padding: 0;
   }
+
+  @media ${device.tablet} {
+    grid-template-areas:
+      "col1 col1"
+      "col2 col2";
+    margin-top: var(--mb-2);
+  }
 `;
 
 export const PortfolioImg = styled.img`
-  /* width: 265px; */
   border-radius: 0.5rem;
   justify-self: center;
+
+  @media ${device.tablet} {
+    width: 265px;
+  }
 `;
 
 export const PortfolioData = styled.div`
@@ -48,10 +63,6 @@ export const PortfolioTitle = styled.h1`
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-5);
 
-  @media ${device.tablet} {
-    font-size: var(--h2-font-size);
-  }
-
   @media ${device.mobileL} {
     font-size: var(--h3-font-size);
   }
@@ -59,15 +70,16 @@ export const PortfolioTitle = styled.h1`
   @media ${device.mobileM} {
     font-size: var(--normal-font-size);
   }
+
+  @media ${device.tablet} {
+    font-size: var(--h3-font-size);
+  }
 `;
 
 export const PortfolioDescription = styled.p`
   color: var(--grey-color);
   margin-bottom: var(--mb-0-75);
   font-size: var(--h3-font-size);
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
 
   @media ${device.mobileL} {
     font-size: var(--small-font-size);
@@ -75,6 +87,10 @@ export const PortfolioDescription = styled.p`
 
   @media ${device.mobileM} {
     font-size: var(--smaller-font-size);
+  }
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
   }
 `;
 

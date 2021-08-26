@@ -55,7 +55,9 @@ export const Grid = styled.div`
 
 export const GridCol1 = styled.div`
   grid-area: col1;
+  justify-self: center;
 `;
 export const GridCol2 = styled.div`
   grid-area: col2;
+  justify-self: center;
 `;
