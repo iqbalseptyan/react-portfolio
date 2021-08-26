@@ -5,6 +5,10 @@ export const Container = styled.div`
   background-color: var(--white-color);
   margin: auto;
 
+  @media ${device.tablet} {
+    max-width: 768px;
+  }
+
   @media ${device.laptop} {
     max-width: 1024px;
   }

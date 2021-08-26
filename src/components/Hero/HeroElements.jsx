@@ -57,7 +57,7 @@ export const HeroContent = styled.div`
 
   @media ${device.laptop} {
     transition: 0.3s;
-    transform: translate(-50%, 370%);
+    transform: translate(-50%, 300%);
   }
 `;
 
