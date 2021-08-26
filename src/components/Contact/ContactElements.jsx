@@ -5,7 +5,11 @@ import { device } from "../MediaQueries";
 export const ContainerContact = styled(Container)`
   color: var(--black-color);
   height: 100%;
-  max-width: 1024px;
+
+  @media ${device.tablet} {
+    max-width: 600px;
+    margin-top: var(--mb-2);
+  }
 `;
 
 export const ContactWrapper = styled(Grid)`
@@ -13,6 +17,10 @@ export const ContactWrapper = styled(Grid)`
   height: 100%;
   @media ${device.mobileM} {
     row-gap: var(--mb-1-5);
+  }
+
+  @media ${device.tablet} {
+    grid-template-areas: "col1 col1" "col2 col2";
   }
 `;
 
@@ -25,16 +33,15 @@ export const ContactIcon = styled.img`
   color: var(--grey-color);
   margin-right: var(--mb-0-75);
   align-self: center;
-  /* width: 100%; */
-
-  @media ${device.tablet} {
-    height: 80%;
-    width: 60%;
-  }
 
   @media ${device.mobileL} {
     height: 100%;
     width: 70%;
+  }
+
+  @media ${device.tablet} {
+    height: 80%;
+    width: 80%;
   }
 `;
 
@@ -48,10 +55,6 @@ export const ContactWrapperForm = styled(Grid)`
     "description description description description"
     "footer footer footer footer";
   gap: var(--mb-0-75);
-  /* height: 100%; */
-  @media ${device.tablet} {
-    justify-self: center;
-  }
 
   @media ${device.mobileL} {
     gap: var(--mb-0-75);
@@ -64,6 +67,10 @@ export const ContactWrapperForm = styled(Grid)`
 
 export const ContactFormDescription = styled.p`
   grid-area: header;
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
 `;
 
 export const ContactName = styled.div`
@@ -73,9 +80,6 @@ export const ContactName = styled.div`
   background-color: var(--light-grey-color);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.75rem;
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
 `;
 
 export const ContactEmail = styled.div`
@@ -85,10 +89,6 @@ export const ContactEmail = styled.div`
   background-color: var(--light-grey-color);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.75rem;
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
 `;
 
 export const ContactSubject = styled.div`
@@ -98,10 +98,6 @@ export const ContactSubject = styled.div`
   background-color: var(--light-grey-color);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.75rem;
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
 `;
 
 export const ContactDescription = styled.div`
@@ -111,10 +107,6 @@ export const ContactDescription = styled.div`
   background-color: var(--light-grey-color);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.75rem;
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
 `;
 
 export const ContactFormButton = styled.div`
@@ -124,11 +116,6 @@ export const ContactFormButton = styled.div`
 export const ContactLabel = styled.label`
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
-  /* width: fit-content; */
-  /* background-color: black; */
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
 
   @media ${device.mobileM} {
     font-size: var(--smaller-font-size);
@@ -136,17 +123,11 @@ export const ContactLabel = styled.label`
 `;
 
 export const ContactInput = styled.input`
-  /* width: 100%; */
   background-color: var(--light-grey-color);
   font-size: var(--normal-font-size);
   border: none;
   outline: none;
-  /* padding: 0.75rem 0.25rem 0.75rem 0.25rem; */
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-    width: 100%;
-  }
+  width: 100%;
 
   @media ${device.mobileL} {
     font-size: var(--small-font-size);
