@@ -10,6 +10,11 @@ export const FooterSection = styled.footer`
 export const ContainerFooter = styled(Container)`
   color: var(--white-color);
   background-color: var(--dark-purple-color);
+
+  @media ${device.tablet} {
+    max-width: 600px;
+    margin-bottom: var(--header-height);
+  }
 `;
 
 export const FooterWrapper = styled.div`
@@ -17,7 +22,8 @@ export const FooterWrapper = styled.div`
   align-content: center;
   align-items: center;
   justify-content: space-around;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
+
   @media ${device.mobileM} {
     row-gap: var(--mb-1);
   }
@@ -25,11 +31,12 @@ export const FooterWrapper = styled.div`
 
 export const GridItem = styled.div`
   text-align: center;
+  align-self: center;
+  justify-self: center;
 `;
 
 export const FooterTitle = styled.h1`
   font-size: var(--h1-font-size);
-  /* margin-bottom: var(--mb-0-25); */
   text-align: center;
 
   @media ${device.tablet} {
@@ -66,15 +73,12 @@ export const FooterSubtitle = styled.small`
 `;
 
 export const FooterLinkMenu = styled.ul`
-  /* display: flex;
-  flex-direction: column; */
-  /* row-gap: 1rem; */
-  /* justify-content: center; */
   align-items: center;
   columns: 3;
 
   @media ${device.tablet} {
     font-size: var(--h3-font-size);
+    columns: 2;
   }
 
   @media ${device.mobileL} {
@@ -103,6 +107,7 @@ export const FooterSocials = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
+  width: 200px;
 `;
 
 export const FooterSocial = styled.div`

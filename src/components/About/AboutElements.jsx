@@ -15,7 +15,6 @@ export const ContainerAbout = styled(Container)`
 `;
 
 export const AboutWrapper = styled(Grid)`
-  grid-template-areas: "col1 col2";
   grid-template-columns: 1fr 1fr;
 
   @media ${device.tablet} {
@@ -23,6 +22,10 @@ export const AboutWrapper = styled(Grid)`
     grid-template-areas:
       "col1 col1"
       "col2 col2";
+  }
+
+  @media ${device.laptop} {
+    grid-template-areas: "col1 col2";
   }
 `;
 

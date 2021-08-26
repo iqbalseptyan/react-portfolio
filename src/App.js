@@ -21,8 +21,8 @@ function App() {
       <Services />
       <Portfolio />
       <Contact />
-      {/* <Footer /> */}
-      {/* <Scrolltop /> */}
+      <Footer />
+      <Scrolltop />
     </>
   );
 }
