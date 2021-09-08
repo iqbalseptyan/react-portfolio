@@ -34,11 +34,11 @@ export const HeroContent = styled.div`
   transform: translate(-50%, 50%);
 
   @media ${device.tablet} {
-    transform: translate(-50%, 70%);
+    transform: translate(-50%, 100%);
   }
 
   @media ${device.laptop} {
-    transform: translate(-50%, 270%);
+    transform: translate(-50%, 150%);
   }
 `;
 
