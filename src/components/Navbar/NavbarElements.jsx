@@ -39,7 +39,7 @@ export const NavLogo = styled.a`
   }
 
   @media ${device.laptop} {
-    font-size: var(--h1-font-size);
+    font-size: var(--h2-font-size);
   }
 `;
 

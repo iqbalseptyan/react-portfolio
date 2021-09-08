@@ -14,20 +14,21 @@ export const Button = styled.button`
   cursor: pointer;
   width: min-content;
 
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.05);
   }
 `;
 
 export const ButtonText = styled.span`
   width: max-content;
+  font-size: var(--smaller-font-size);
 
-  @media ${device.mobileM} {
+  @media ${device.tablet} {
     font-size: var(--small-font-size);
   }
-
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
+  @media ${device.laptop} {
+    font-size: var(--normal-font-size);
   }
 `;
 
@@ -37,8 +38,13 @@ export const ButtonIcon = styled.div`
   margin-left: var(--mb-0-5);
   transition: 0.3s;
 
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
+  font-size: var(--smaller-font-size);
+
+  @media ${device.tablet} {
+    font-size: var(--small-font-size);
+  }
+  @media ${device.laptop} {
+    font-size: var(--normal-font-size);
   }
 `;
 

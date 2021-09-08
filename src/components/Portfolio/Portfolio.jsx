@@ -26,9 +26,6 @@ import "swiper/components/pagination/pagination.min.css";
 SwiperCore.use([Navigation, Pagination]);
 
 const Portfolio = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-
   return (
     <Section>
       <SectionTitle>Portfolio</SectionTitle>
@@ -36,15 +33,7 @@ const Portfolio = () => {
       <ContainerPortfolio>
         <Swiper
           loop
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.update();
-          }}
+          navigation={true}
           pagination={{
             dynamicBullets: true,
           }}
@@ -111,19 +100,6 @@ const Portfolio = () => {
               </PortfolioData>
             </PortfolioWrapper>
           </SwiperSlide>
-
-          <SwiperNavigation>
-            <SwiperButtonPrev ref={prevRef}>
-              <SwiperIcon>
-                <MdKeyboardArrowLeft />
-              </SwiperIcon>
-            </SwiperButtonPrev>
-            <SwiperButtonNext ref={nextRef}>
-              <SwiperIcon>
-                <MdKeyboardArrowRight />
-              </SwiperIcon>
-            </SwiperButtonNext>
-          </SwiperNavigation>
         </Swiper>
       </ContainerPortfolio>
     </Section>

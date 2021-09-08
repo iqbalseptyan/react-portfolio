@@ -17,13 +17,17 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  padding: 2rem 0 2rem;
+  padding: 2rem 0 4rem;
 `;
 
 export const SectionTitle = styled.h1`
   color: var(--dark-color);
   font-size: var(--h1-font-size);
   text-align: center;
+
+  @media ${device.laptop} {
+    font-size: var(--big-font-size);
+  }
 `;
 
 export const SectionSubtitle = styled.small`
@@ -32,6 +36,10 @@ export const SectionSubtitle = styled.small`
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-3);
   text-align: center;
+
+  @media ${device.laptop} {
+    font-size: var(--normal-font-size);
+  }
 `;
 
 export const Grid = styled.div`

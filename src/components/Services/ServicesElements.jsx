@@ -10,7 +10,8 @@ export const ServicesWrapper = styled(Grid)`
   grid-template-columns: repeat(1, 1fr);
 
   @media ${device.tablet} {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 0.3fr);
+    justify-content: center;
   }
 `;
 
@@ -22,9 +23,10 @@ export const ServicesCard = styled.div`
   background-color: var(--white-color);
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-
+  transition: all 0.2s ease-in-out;
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
   }
 `;
 
