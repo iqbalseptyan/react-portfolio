@@ -29,16 +29,28 @@ export const HeroContent = styled.div`
   left: 50%;
   transition: 0.3s;
   transform: translate(-50%, 50%);
+
+  @media ${device.tablet} {
+    transform: translate(-50%, 250%);
+  }
 `;
 
 export const HeroTitle = styled.h1`
   font-size: var(--h3-font-size);
   color: var(--purple-color);
   font-weight: var(--font-semi-bold);
+
+  @media ${device.tablet} {
+    font-size: var(--h2-font-size);
+  }
 `;
 
 export const HeroSubtitle = styled.p`
   font-size: var(--small-font-size);
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
 `;
 
 export const HeroImg = styled.img`

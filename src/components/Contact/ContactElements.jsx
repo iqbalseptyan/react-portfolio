@@ -18,6 +18,10 @@ export const ContactIcon = styled.img`
   margin-right: var(--mb-0-75);
   align-self: center;
   width: 70%;
+
+  @media ${device.tablet} {
+    width: 50%;
+  }
 `;
 
 export const ContactForm = styled.form`
@@ -58,6 +62,10 @@ export const ContactDescription = styled(ContactBox)`
 export const ContactLabel = styled.label`
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
+
+  @media ${device.tablet} {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const ContactInput = styled.input`
@@ -67,6 +75,10 @@ export const ContactInput = styled.input`
   border: none;
   outline: none;
   padding: 0.75rem 0.25rem 0.75rem 0.25rem;
+
+  @media ${device.tablet} {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const ContactTextArea = styled.textarea`
@@ -77,6 +89,10 @@ export const ContactTextArea = styled.textarea`
   outline: none;
   padding: 0.75rem 0.25rem 0.75rem 0.25rem;
   resize: none;
+
+  @media ${device.tablet} {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const FormButton = styled.div``;

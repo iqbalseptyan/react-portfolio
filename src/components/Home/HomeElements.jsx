@@ -20,10 +20,14 @@ export const HomeSocial = styled(Grid)`
 
 export const HomeLinks = styled.a`
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: var(--h2-font-size);
   color: var(--black-color);
   &:hover {
     color: var(--dark-purple-color);
+  }
+
+  @media ${device.tablet} {
+    font-size: var(--h1-font-size);
   }
 `;
 
@@ -39,6 +43,10 @@ export const HomeData = styled.div`
 
 export const HomeTitle = styled.h1`
   font-size: var(--h1-font-size);
+
+  @media ${device.tablet} {
+    font-size: var(--big-font-size);
+  }
 `;
 
 export const HomeSubtitle = styled.p`
@@ -46,10 +54,18 @@ export const HomeSubtitle = styled.p`
   color: var(--grey-color);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-5);
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
 `;
 
 export const HomeDescription = styled.p`
   color: var(--grey-color);
   margin-bottom: var(--mb-2);
   font-size: var(--smaller-font-size);
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
 `;

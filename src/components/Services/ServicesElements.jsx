@@ -8,6 +8,10 @@ export const ContainerServices = styled(Container)`
 
 export const ServicesWrapper = styled(Grid)`
   grid-template-columns: repeat(1, 1fr);
+
+  @media ${device.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const ServicesCard = styled.div`
@@ -31,17 +35,24 @@ export const ServicesCardWrapper = styled.div`
 `;
 
 export const ServicesIcon = styled.div`
-  font-size: 1.5rem;
+  font-size: var(--mb-1-5);
   color: var(--dark-purple-color);
   margin-bottom: var(--mb-1-5);
+
+  @media ${device.tablet} {
+    font-size: var(--mb-2);
+  }
 `;
 
 export const ServicesTitle = styled.h1`
   font-size: var(--normal-font-size);
-
   width: 120px;
   word-wrap: break-word;
   margin-bottom: var(--mb-1);
+
+  @media ${device.tablet} {
+    font-size: var(--h3-font-size);
+  }
 `;
 
 export const ServicesModalWrapper = styled.div`

@@ -18,6 +18,10 @@ export const FooterWrapper = styled(Grid)`
 export const FooterTitle = styled.h1`
   font-size: var(--h2-font-size);
   text-align: center;
+
+  @media ${device.tablet} {
+    font-size: var(--h1-font-size);
+  }
 `;
 
 export const FooterSubtitle = styled.small`
@@ -25,6 +29,10 @@ export const FooterSubtitle = styled.small`
   margin-bottom: var(--mb-3);
   text-align: center;
   font-size: var(--smaller-font-size);
+
+  @media ${device.tablet} {
+    font-size: var(--small-font-size);
+  }
 `;
 
 export const FooterLinkMenu = styled.ul`
@@ -47,6 +55,10 @@ export const FooterLink = styled.a`
 
   &:hover {
     color: var(--dark-purple-color);
+  }
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
   }
 `;
 
@@ -73,4 +85,8 @@ export const FooterIcon = styled.a`
 export const FooterCopyright = styled.small`
   font-size: var(--smaller-font-size);
   text-align: center;
+
+  @media ${device.tablet} {
+    font-size: var(--small-font-size);
+  }
 `;

@@ -18,19 +18,26 @@ export const PortfolioImg = styled.img`
 export const PortfolioData = styled.div`
   color: var(--black-color);
   justify-self: center;
-
   margin-bottom: var(--mb-2);
 `;
 
 export const PortfolioTitle = styled.h1`
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb-0-5);
+
+  @media ${device.tablet} {
+    font-size: var(--h3-font-size);
+  }
 `;
 
 export const PortfolioDescription = styled.p`
   color: var(--grey-color);
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-0-75);
+
+  @media ${device.tablet} {
+    font-size: var(--normal-font-size);
+  }
 `;
 
 export const PortfolioLink = styled.div`
