@@ -27,62 +27,18 @@ export const HeroContent = styled.div`
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, 250%);
   transition: 0.3s;
-
-  @media (max-width: 698px) {
-    transition: 0.3s;
-    transform: translate(-50%, 100%);
-  }
-
-  @media (max-width: 568px) {
-    transition: 0.3s;
-    transform: translate(-50%, 80%);
-  }
-
-  @media ${device.mobileL} {
-    transition: 0.3s;
-    transform: translate(-50%, 50%);
-  }
-
-  @media ${device.mobileM} {
-    transition: 0.3s;
-    transform: translate(-50%, 50%);
-  }
+  transform: translate(-50%, 50%);
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: var(--big-font-size);
+  font-size: var(--h3-font-size);
   color: var(--purple-color);
   font-weight: var(--font-semi-bold);
-
-  @media ${device.tablet} {
-    font-size: var(--h1-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--h2-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--h3-font-size);
-  }
 `;
 
 export const HeroSubtitle = styled.p`
-  font-size: var(--normal-font-size);
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--small-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
-  }
+  font-size: var(--small-font-size);
 `;
 
 export const HeroImg = styled.img`

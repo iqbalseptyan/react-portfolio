@@ -7,13 +7,7 @@ export const ContainerPortfolio = styled(Container)`
   z-index: 0;
 `;
 
-export const PortfolioWrapper = styled(Grid)`
-  padding: 0 2.5rem;
-
-  @media ${device.mobileL} {
-    padding: 0;
-  }
-`;
+export const PortfolioWrapper = styled(Grid)``;
 
 export const PortfolioImg = styled.img`
   width: 265px;
@@ -22,49 +16,21 @@ export const PortfolioImg = styled.img`
 `;
 
 export const PortfolioData = styled.div`
-  margin-bottom: var(--mb-2);
+  color: var(--black-color);
+  justify-self: center;
 
-  @media ${device.mobileL} {
-    display: flex;
-    flex-direction: column;
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
-  }
+  margin-bottom: var(--mb-2);
 `;
 
 export const PortfolioTitle = styled.h1`
-  color: var(--black-color);
-  font-size: var(--h2-font-size);
+  font-size: var(--normal-font-size);
   margin-bottom: var(--mb-0-5);
-
-  @media ${device.tablet} {
-    font-size: var(--h1-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--h3-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--normal-font-size);
-  }
 `;
 
 export const PortfolioDescription = styled.p`
   color: var(--grey-color);
+  font-size: var(--small-font-size);
   margin-bottom: var(--mb-0-75);
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--small-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
-  }
 `;
 
 export const PortfolioLink = styled.div`
@@ -72,7 +38,7 @@ export const PortfolioLink = styled.div`
 `;
 
 export const SwiperNavigation = styled.div`
-  display: flex;
+  /* display: flex; */
   position: absolute;
   align-items: center;
   justify-content: space-between;
@@ -83,10 +49,7 @@ export const SwiperNavigation = styled.div`
   bottom: 0;
   cursor: pointer;
   z-index: var(--z-tooltip);
-
-  @media ${device.mobileL} {
-    display: none;
-  }
+  display: none;
 `;
 
 export const SwiperButtonPrev = styled.div`

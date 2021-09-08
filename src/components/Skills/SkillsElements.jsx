@@ -7,15 +7,12 @@ export const ContainerSkills = styled(Container)`
 `;
 
 export const SkillsWrapper = styled(Grid)`
-  @media ${device.mobileM} {
-    gap: 0;
-  }
+  gap: 0;
 `;
 
 export const SkillsHeader = styled.div`
   display: flex;
   align-items: center;
-  /* margin-bottom: var(--mb-2-5); */
 `;
 
 export const SkillsIcon = styled.div`
@@ -30,52 +27,26 @@ export const SkillArrowIcon = styled(SkillsIcon)`
 `;
 
 export const SkillsTitle = styled.h1`
-  font-size: var(--h1-font-size);
-
-  @media ${device.tablet} {
-    font-size: var(--h2-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--h3-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--normal-font-size);
-  }
+  font-size: var(--normal-font-size);
 `;
 
 export const SkillsSubTitle = styled.p`
-  font-size: var(--small-font-size);
+  font-size: var(--smaller-font-size);
   color: var(--grey-color);
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--small-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
-  }
 `;
 
 export const SkillsList = styled(Grid)`
-  margin-bottom: var(--mb-2-5);
-  height: ${(props) => (props.open ? 0 : "max-content")};
-  overflow: auto;
-
-  @media ${device.mobileL} {
-    margin-bottom: 0;
-  }
+  /* margin-bottom: var(--mb-2-5); */
+  height: ${(props) => (props.open ? 0 : "100%")};
+  overflow: hidden;
+  transition: 0.3s;
 `;
 
 export const SkillsData = styled.div`
-  transition: 0.3s;
-
   color: var(--black-color);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const SkillsTitles = styled.div`
@@ -84,38 +55,14 @@ export const SkillsTitles = styled.div`
   margin-bottom: var(--mb-0-5);
 `;
 
-export const SkillsName = styled.h1`
-  font-size: var(--h1-font-size);
+export const SkillsName = styled.p`
+  font-size: var(--small-font-size);
   font-weight: var(--font-medium);
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--small-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
-  }
 `;
 
-export const SkillsNumber = styled.h1`
-  font-size: var(--h1-font-size);
+export const SkillsNumber = styled.p`
+  font-size: var(--small-font-size);
   font-weight: var(--font-medium);
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--small-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
-  }
 `;
 
 export const SkillsBar = styled.progress`

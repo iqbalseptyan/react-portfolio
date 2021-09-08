@@ -25,19 +25,12 @@ export const HomeLinks = styled.a`
   &:hover {
     color: var(--dark-purple-color);
   }
-
-  @media ${device.tablet} {
-    font-size: var(--h1-font-size);
-  }
 `;
 
 export const BlobImg = styled(Blob)`
   fill: var(--dark-purple-color);
   height: 100%;
   width: 200px;
-  @media ${device.mobileM} {
-    width: 200px;
-  }
 `;
 
 export const HomeData = styled.div`
@@ -45,53 +38,18 @@ export const HomeData = styled.div`
 `;
 
 export const HomeTitle = styled.h1`
-  font-size: var(--big-font-size);
-
-  @media ${device.tablet} {
-    font-size: var(--medium-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--h1-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--h2-font-size);
-  }
+  font-size: var(--h1-font-size);
 `;
 
-export const HomeSubtitle = styled.h2`
-  font-size: var(--h3-font-size);
+export const HomeSubtitle = styled.p`
+  font-size: var(--small-font-size);
   color: var(--grey-color);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-5);
-
-  @media ${device.tablet} {
-    font-size: var(--h2-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--h3-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--normal-font-size);
-  }
 `;
 
 export const HomeDescription = styled.p`
   color: var(--grey-color);
   margin-bottom: var(--mb-2);
-
-  @media ${device.tablet} {
-    font-size: var(--h3-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--normal-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--small-font-size);
-  }
+  font-size: var(--smaller-font-size);
 `;

@@ -22,7 +22,7 @@ function App() {
       <Portfolio />
       <Contact />
       <Footer />
-      <Scrolltop />
+      {/* <Scrolltop /> */}
     </>
   );
 }

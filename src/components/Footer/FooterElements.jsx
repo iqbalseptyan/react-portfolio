@@ -1,77 +1,39 @@
 import styled from "styled-components";
-import { Container, Grid } from "../GlobalElements";
 import { device } from "../MediaQueries";
+import { Container, Grid } from "../GlobalElements";
 
 export const FooterSection = styled.footer`
   padding: 2rem 0 4rem;
+  background-color: var(--dark-purple-color);
 `;
 
 export const ContainerFooter = styled(Container)`
-  color: var(--black-color);
+  color: var(--white-color);
 `;
 
 export const FooterWrapper = styled(Grid)`
-  @media ${device.mobileM} {
-    row-gap: var(--mb-1);
-  }
+  row-gap: 0;
 `;
 
 export const FooterTitle = styled.h1`
-  font-size: var(--h1-font-size);
-  /* margin-bottom: var(--mb-0-25); */
+  font-size: var(--h2-font-size);
   text-align: center;
-
-  @media ${device.tablet} {
-    font-size: var(--h1-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--h2-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--h3-font-size);
-  }
 `;
 
 export const FooterSubtitle = styled.small`
   display: block;
   margin-bottom: var(--mb-3);
   text-align: center;
-  font-size: var(--normal-font-size);
-
-  @media ${device.tablet} {
-    font-size: var(--normal-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--small-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
-  }
+  font-size: var(--smaller-font-size);
 `;
 
 export const FooterLinkMenu = styled.ul`
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: var(--mb-1);
   list-style-type: none;
   justify-content: center;
   align-items: center;
-
-  @media ${device.tablet} {
-    font-size: var(--h3-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--normal-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--small-font-size);
-  }
 `;
 
 export const FooterLinks = styled.li`
@@ -81,6 +43,8 @@ export const FooterLinks = styled.li`
 
 export const FooterLink = styled.a`
   cursor: pointer;
+  font-size: var(--small-font-size);
+
   &:hover {
     color: var(--dark-purple-color);
   }
@@ -99,38 +63,14 @@ export const FooterSocial = styled.div`
 
 export const FooterIcon = styled.a`
   cursor: pointer;
-  color: var(--black-color);
+  color: var(--white-color);
 
   &:hover {
     color: var(--dark-purple-color);
   }
-
-  @media ${device.tablet} {
-    font-size: var(--h1-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--h2-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--h3-font-size);
-  }
 `;
 
 export const FooterCopyright = styled.small`
-  font-size: var(--small-font-size);
+  font-size: var(--smaller-font-size);
   text-align: center;
-
-  @media ${device.tablet} {
-    font-size: var(--small-font-size);
-  }
-
-  @media ${device.mobileL} {
-    font-size: var(--small-font-size);
-  }
-
-  @media ${device.mobileM} {
-    font-size: var(--smaller-font-size);
-  }
 `;
