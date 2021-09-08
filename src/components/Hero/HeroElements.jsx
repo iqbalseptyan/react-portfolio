@@ -5,9 +5,8 @@ import { device } from "../MediaQueries";
 export const ContainerHero = styled(Container)`
   color: var(--white-color);
   margin-top: var(--header-height);
-
   @media ${device.laptop} {
-    margin-top: 90px;
+    margin-top: 85px;
   }
 `;
 
@@ -22,7 +21,7 @@ export const HeroShadow = styled.div`
   background-color: #000;
   border: 2px solid black;
   width: 100%;
-  height: 98.5%;
+  height: 98.8%;
   opacity: 0.75;
   position: absolute;
 `;

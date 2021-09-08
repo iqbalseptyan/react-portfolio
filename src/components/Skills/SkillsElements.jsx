@@ -16,13 +16,14 @@ export const SkillsWrapper = styled(Grid)`
 
 export const Col1 = styled.div`
   padding-bottom: 2rem;
-
+  color: ${(props) => props.theme.txtFirst};
   @media ${device.laptop} {
     grid-area: Col1;
   }
 `;
 
 export const Col2 = styled.div`
+  color: ${(props) => props.theme.txtFirst};
   @media ${device.laptop} {
     grid-area: Col2;
   }
@@ -35,7 +36,7 @@ export const SkillsHeader = styled.div`
 
 export const SkillsIcon = styled.div`
   font-size: 2rem;
-  color: var(--dark-purple-color);
+  color: ${(props) => props.theme.txtThird};
   padding: 1rem;
   cursor: pointer;
 `;
@@ -57,7 +58,7 @@ export const SkillsTitle = styled.h1`
 
 export const SkillsSubTitle = styled.p`
   font-size: var(--smaller-font-size);
-  color: var(--grey-color);
+  color: ${(props) => props.theme.txtSecond};
 
   @media ${device.tablet} {
     font-size: var(--normal-font-size);
@@ -74,7 +75,7 @@ export const SkillsList = styled(Grid)`
 `;
 
 export const SkillsData = styled.div`
-  color: var(--black-color);
+  color: ${(props) => props.theme.txtFirst};
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -116,17 +117,17 @@ export const SkillsBar = styled.progress`
   border-radius: 0.25rem;
 
   &::-moz-progress-bar {
-    background: var(--dark-purple-color);
+    background-color: ${(props) => props.theme.txtThird};
     border-radius: 10px;
   }
 
   &::-webkit-progress-bar {
     border-radius: 10px;
-    background-color: var(--light-grey-color);
+    background-color: ${(props) => props.theme.txtSecond};
   }
 
   &::-webkit-progress-value {
-    background: var(--dark-purple-color);
+    background-color: ${(props) => props.theme.txtThird};
     border-radius: 10px;
   }
 `;

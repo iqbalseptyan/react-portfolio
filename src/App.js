@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { ThemeProvider } from "styled-components";
 import "./App.css";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
@@ -11,9 +13,41 @@ import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
 
 function App() {
+  const [toggleTheme, setToggleTheme] = useState(false);
+
+  const changeState = () => {
+    setToggleTheme((current) => !current);
+  };
+
+  const theme = {
+    bg: "var(--white-color)",
+    txtFirst: "var(--black-color)",
+    txtSecond: "var(--grey-color)",
+    txtThird: "var(--purple-color)",
+  };
+
+  if (toggleTheme)
+    var updatedTheme = {
+      ...theme,
+      bg: "var(--dark-color)",
+      txtFirst: "var(--white-color)",
+      txtSecond: "var(--light-grey-color)",
+      txtThird: "var(--purple-color)",
+      darkTheme: true,
+    };
+  else
+    updatedTheme = {
+      ...theme,
+      bg: "var(--white-color)",
+      txtFirst: "var(--black-color)",
+      txtSecond: "var(--grey-color)",
+      txtThird: "var(--dark-purple-color)",
+      darkTheme: false,
+    };
+
   return (
-    <>
-      <Navbar />
+    <ThemeProvider theme={updatedTheme}>
+      <Navbar handler={changeState} toggleTheme={toggleTheme} />
       <Hero />
       <Home />
       <About />
@@ -22,8 +56,8 @@ function App() {
       <Portfolio />
       <Contact />
       <Footer />
-      {/* <Scrolltop /> */}
-    </>
+      <Scrolltop />
+    </ThemeProvider>
   );
 }
 

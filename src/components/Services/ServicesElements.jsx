@@ -20,12 +20,12 @@ export const ServicesCard = styled.div`
   width: 250px;
   height: 280px;
   position: relative;
-  background-color: var(--white-color);
+  background-color: ${(props) => !props.theme.txtFirst};
+  color: ${(props) => props.theme.txtFirst};
   border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 8px 4px ${(props) => props.theme.txtSecond};
   transition: all 0.2s ease-in-out;
   &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transform: scale(1.05);
   }
 `;
@@ -38,7 +38,7 @@ export const ServicesCardWrapper = styled.div`
 
 export const ServicesIcon = styled.div`
   font-size: var(--mb-1-5);
-  color: var(--dark-purple-color);
+  color: ${(props) => props.theme.txtThird};
   margin-bottom: var(--mb-1-5);
 
   @media ${device.tablet} {

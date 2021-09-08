@@ -4,7 +4,8 @@ import { device } from "./MediaQueries";
 export const Container = styled.div`
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
-
+  transition: 0.2s;
+  color: ${(props) => props.theme.txtFirst};
   @media ${device.laptop} {
     max-width: 1024px;
     margin: auto;
@@ -18,10 +19,12 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   padding: 2rem 0 4rem;
+
+  background-color: ${(props) => props.theme.bg};
+  color: ${(props) => props.theme.txtFirst};
 `;
 
 export const SectionTitle = styled.h1`
-  color: var(--dark-color);
   font-size: var(--h1-font-size);
   text-align: center;
 
@@ -32,7 +35,7 @@ export const SectionTitle = styled.h1`
 
 export const SectionSubtitle = styled.small`
   display: block;
-  color: var(--grey-color);
+  color: ${(props) => props.theme.txtSecond};
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-3);
   text-align: center;

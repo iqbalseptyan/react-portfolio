@@ -6,7 +6,7 @@ export const Button = styled.button`
   background-color: ${(props) =>
     props.bgTransparent ? "transparent" : "var(--dark-purple-color)"};
   color: ${(props) =>
-    props.bgTransparent ? "var(--dark-purple-color)" : "var(--white-color)"};
+    props.bgTransparent ? props.theme.txtThird : "var(--white-color)"};
   padding: ${(props) => (props.bgTransparent ? 0 : "1rem")};
   border: none;
   border-radius: 10px;

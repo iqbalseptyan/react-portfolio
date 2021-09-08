@@ -3,18 +3,16 @@ import { Container, Grid } from "../GlobalElements";
 import { device } from "../MediaQueries";
 
 export const ContainerPortfolio = styled(Container)`
-  color: var(--black-color);
-
   & .swiper-button-prev {
-    color: var(--dark-purple-color);
+    color: ${(props) => props.theme.txtThird};
   }
 
   & .swiper-button-next {
-    color: var(--dark-purple-color);
+    color: ${(props) => props.theme.txtThird};
   }
 
   & .swiper-pagination-bullet-active {
-    background-color: var(--dark-purple-color);
+    background-color: ${(props) => props.theme.txtThird};
   }
 `;
 
@@ -40,7 +38,6 @@ export const PortfolioImg = styled.img`
 `;
 
 export const PortfolioData = styled.div`
-  color: var(--black-color);
   justify-self: center;
   margin-bottom: var(--mb-2);
   @media ${device.laptop} {
@@ -61,7 +58,7 @@ export const PortfolioTitle = styled.h1`
 `;
 
 export const PortfolioDescription = styled.p`
-  color: var(--grey-color);
+  color: ${(props) => props.theme.txtSecond};
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-0-75);
 

@@ -36,16 +36,16 @@ export const HomeLinks = styled.a`
 
   @media ${device.laptop} {
     font-size: var(--big-font-size);
+    color: ${(props) => props.theme.txtFirst};
 
-    color: var(--black-color);
     &:hover {
-      color: var(--dark-purple-color);
+      color: ${(props) => props.theme.txtThird};
     }
   }
 `;
 
 export const BlobImg = styled(Blob)`
-  fill: var(--dark-purple-color);
+  fill: ${(props) => props.theme.txtThird};
   height: 100%;
   width: 200px;
 
@@ -77,7 +77,7 @@ export const HomeTitle = styled.h1`
 
 export const HomeSubtitle = styled.p`
   font-size: var(--small-font-size);
-  color: var(--grey-color);
+  color: ${(props) => props.theme.txtSecond};
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-5);
 
@@ -90,7 +90,7 @@ export const HomeSubtitle = styled.p`
 `;
 
 export const HomeDescription = styled.p`
-  color: var(--grey-color);
+  color: ${(props) => props.theme.txtSecond};
   margin-bottom: var(--mb-2);
   font-size: var(--smaller-font-size);
 

@@ -11,17 +11,21 @@ import {
   NavLogo,
   NavMenu,
   NavToggle,
+  NavToggleTheme,
+  ToggleMenu,
 } from "./NavbarElements";
 import {
   FaBriefcase,
   FaFileAlt,
   FaFileImage,
   FaHome,
+  FaLightbulb,
+  FaRegLightbulb,
   FaUser,
 } from "react-icons/fa";
 import { MdApps, MdClose, MdMessage } from "react-icons/md";
 
-const Navbar = () => {
+const Navbar = (props) => {
   // toggle menu
   const [toggle, setToggle] = useState(false);
 
@@ -80,14 +84,24 @@ const Navbar = () => {
                   Contact
                 </NavLinks>
               </NavItem>
+
               <NavClose onClick={() => setToggle(false)}>
                 <MdClose />
               </NavClose>
             </NavGridList>
           </NavMenu>
-          <NavToggle onClick={() => setToggle(true)}>
-            <MdApps />
-          </NavToggle>
+          <ToggleMenu>
+            <NavToggleTheme onClick={props.handler}>
+              <NavIcon style={{ display: "initial" }}>
+                {props.toggleTheme ? <FaRegLightbulb /> : <FaLightbulb />}
+              </NavIcon>
+            </NavToggleTheme>
+            <NavToggle onClick={() => setToggle(true)}>
+              <NavIcon>
+                <MdApps />
+              </NavIcon>
+            </NavToggle>
+          </ToggleMenu>
         </Nav>
       </Container>
     </Header>

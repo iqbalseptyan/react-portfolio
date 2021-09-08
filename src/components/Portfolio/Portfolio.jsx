@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Section, SectionSubtitle, SectionTitle } from "../GlobalElements";
 import {
   PortfolioDescription,
@@ -7,16 +7,11 @@ import {
   PortfolioImg,
   PortfolioTitle,
   PortfolioWrapper,
-  SwiperButtonNext,
-  SwiperIcon,
-  SwiperButtonPrev,
-  SwiperNavigation,
   PortfolioLink,
 } from "./PortfolioElements";
 import { Button, ButtonFlex, ButtonIcon } from "../ButtonElements";
 import image from "../../images/Image.png";
 import { FaArrowRight } from "react-icons/fa";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper/core";
 import "swiper/swiper-bundle.css";

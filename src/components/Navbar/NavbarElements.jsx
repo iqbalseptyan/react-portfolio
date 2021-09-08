@@ -8,7 +8,8 @@ export const Header = styled.div`
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--white-color);
+  background-color: ${(props) => props.theme.bg};
+  color: ${(props) => props.theme.txtFirst};
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 
   @media ${device.laptop} {
@@ -32,12 +33,11 @@ export const NavLogo = styled.a`
   text-decoration: none;
   cursor: pointer;
   font-size: var(--small-font-size);
-  color: var(--black-color);
   font-weight: var(--font-medium);
+  transition: 0.3s;
   &:hover {
-    color: var(--dark-purple-color);
+    color: ${(props) => props.theme.txtThird};
   }
-
   @media ${device.laptop} {
     font-size: var(--h2-font-size);
   }
@@ -48,7 +48,7 @@ export const NavGridList = styled(Grid)`
   gap: 2rem;
 
   @media ${device.laptop} {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
   }
 `;
 
@@ -57,18 +57,17 @@ export const NavMenu = styled.ul`
   position: fixed;
   bottom: ${(props) => (props.show ? 0 : "-100%")};
   left: 0;
-  width: 100%;
-  background-color: var(--white-color);
+  background-color: ${(props) => props.theme.bg};
   padding: 2rem 1.5rem 4rem;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
   border-radius: 1rem 1rem 0 0;
-  transition: 0.3s ease;
-
+  transition: 0.3s;
+  width: 100%;
   @media ${device.laptop} {
     position: relative;
     bottom: unset;
     left: unset;
-    width: 70%;
+    width: min-content;
     background-color: unset;
     padding: unset;
     box-shadow: unset;
@@ -87,7 +86,8 @@ export const NavItem = styled.li`
     height: 80px;
 
     &:hover {
-      border-bottom: 7px solid var(--dark-purple-color);
+      color: ${(props) => props.theme.txtThird};
+      border-bottom: 7px solid ${(props) => props.theme.txtThird};
       border-radius: 10px 10px;
       transition: 0.2s;
     }
@@ -98,6 +98,11 @@ export const NavLinks = styled(NavLogo)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.4s;
+  &:hover {
+    color: ${(props) => props.theme.txtThird};
+    transform: scale(1.1);
+  }
 `;
 
 export const NavIcon = styled.div`
@@ -105,6 +110,19 @@ export const NavIcon = styled.div`
 
   @media ${device.laptop} {
     display: none;
+  }
+`;
+
+export const NavToggleTheme = styled.div`
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  @media ${device.laptop} {
+    display: flex;
+    align-items: center;
+    height: var(--header-height-desktop);
+    &:hover {
+      transform: scale(1.5);
+    }
   }
 `;
 
@@ -131,4 +149,10 @@ export const NavClose = styled.a`
   @media ${device.laptop} {
     display: none;
   }
+`;
+
+export const ToggleMenu = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 0.5rem;
 `;

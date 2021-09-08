@@ -4,7 +4,8 @@ import { Container, Grid } from "../GlobalElements";
 
 export const FooterSection = styled.footer`
   padding: 2rem 0;
-  background-color: var(--dark-purple-color);
+  background-color: ${(props) =>
+    props.theme.darkTheme ? "var(--dark-color)" : "var(--dark-purple-color)"};
 `;
 
 export const ContainerFooter = styled(Container)`
@@ -81,7 +82,7 @@ export const FooterLink = styled.a`
     font-size: var(--h3-font-size);
 
     &:hover {
-      color: var(--dark-color);
+      color: ${(props) => props.theme.txtThird};
     }
   }
 `;
@@ -109,10 +110,11 @@ export const FooterSocial = styled.div`
 export const FooterIcon = styled.a`
   cursor: pointer;
   color: var(--white-color);
+  transition: 0.2s;
 
   @media ${device.laptop} {
     &:hover {
-      color: var(--dark-color);
+      color: var(--purple-color);
     }
   }
 `;

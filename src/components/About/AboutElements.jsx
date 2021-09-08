@@ -3,7 +3,7 @@ import { Container, Grid } from "../GlobalElements";
 import { device } from "../MediaQueries";
 
 export const ContainerAbout = styled(Container)`
-  color: var(--black-color);
+  //hmm
 `;
 
 export const AboutWrapper = styled(Grid)`
@@ -38,7 +38,7 @@ export const AboutImg = styled.img`
 `;
 
 export const AboutDescription = styled.p`
-  color: var(--grey-color);
+  color: ${(props) => props.theme.txtSecond};
   text-align: center;
   font-size: var(--small-font-size);
 
@@ -74,7 +74,7 @@ export const AboutInfoTitle = styled.h1`
 `;
 
 export const AboutInfoSubTitle = styled.p`
-  color: var(--grey-color);
+  color: ${(props) => props.theme.txtSecond};
   font-size: var(--smaller-font-size);
   width: 100px;
   word-wrap: break-word;

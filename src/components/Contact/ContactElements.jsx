@@ -51,7 +51,7 @@ export const ContactWrapperForm = styled(Grid)`
 `;
 
 export const ContactBox = styled.div`
-  background-color: var(--light-grey-color);
+  background-color: ${(props) => props.theme.txtSecond};
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.75rem;
 `;
@@ -75,7 +75,8 @@ export const ContactDescription = styled(ContactBox)`
 export const ContactLabel = styled.label`
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
-
+  color: ${(props) =>
+    props.theme.darkTheme ? "var(--black-color)" : "var(--white-color)"};
   @media ${device.tablet} {
     font-size: var(--small-font-size);
   }
@@ -86,7 +87,8 @@ export const ContactLabel = styled.label`
 
 export const ContactInput = styled.input`
   width: 100%;
-  background-color: var(--light-grey-color);
+  background-color: ${(props) => props.theme.txtSecond};
+
   font-size: var(--smaller-font-size);
   border: none;
   outline: none;
@@ -102,7 +104,7 @@ export const ContactInput = styled.input`
 
 export const ContactTextArea = styled.textarea`
   width: 100%;
-  background-color: var(--light-grey-color);
+  background-color: ${(props) => props.theme.txtSecond};
   font-size: var(--smaller-font-size);
   border: none;
   outline: none;
