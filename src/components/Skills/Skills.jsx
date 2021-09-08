@@ -24,7 +24,7 @@ const Skills = () => {
   const [openBackEnd, setOpenBackEnd] = useState(false);
 
   return (
-    <Section>
+    <Section id="skills">
       <SectionTitle>Skills</SectionTitle>
       <SectionSubtitle>Technical</SectionSubtitle>
 

@@ -21,7 +21,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <Section>
+    <Section id="contact">
       <SectionTitle>Contact</SectionTitle>
       <SectionSubtitle>Get in touch</SectionSubtitle>
       <ContainerContact>

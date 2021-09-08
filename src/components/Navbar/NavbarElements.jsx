@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Grid } from "../GlobalElements";
 import { device } from "../MediaQueries";
+import { Link as scroll } from "react-scroll";
 
 export const Header = styled.div`
   width: 100%;
@@ -29,7 +30,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavLogo = styled.a`
+export const NavLogo = styled(scroll)`
   text-decoration: none;
   cursor: pointer;
   font-size: var(--small-font-size);
@@ -64,7 +65,8 @@ export const NavMenu = styled.ul`
   transition: 0.3s;
   width: 100%;
   @media ${device.laptop} {
-    position: relative;
+    position: initial;
+    display: flex;
     bottom: unset;
     left: unset;
     width: min-content;
@@ -77,20 +79,10 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   text-decoration: none;
-  cursor: pointer;
   @media ${device.laptop} {
     display: flex;
     align-items: center;
-    text-align: center;
-    justify-content: center;
-    height: 80px;
-
-    &:hover {
-      color: ${(props) => props.theme.txtThird};
-      border-bottom: 7px solid ${(props) => props.theme.txtThird};
-      border-radius: 10px 10px;
-      transition: 0.2s;
-    }
+    height: inherit;
   }
 `;
 
@@ -98,10 +90,16 @@ export const NavLinks = styled(NavLogo)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: 0.4s;
+  transition: 0.1s;
   &:hover {
     color: ${(props) => props.theme.txtThird};
-    transform: scale(1.1);
+    border-bottom: 7px solid ${(props) => props.theme.txtThird};
+    border-radius: 10px 10px;
+  }
+  &.active {
+    color: ${(props) => props.theme.txtThird};
+    border-bottom: 7px solid ${(props) => props.theme.txtThird};
+    border-radius: 10px 10px;
   }
 `;
 

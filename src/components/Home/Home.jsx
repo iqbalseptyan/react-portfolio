@@ -18,7 +18,7 @@ import {} from "react-icons/fa";
 const Home = () => {
   return (
     <>
-      <Section>
+      <Section id="home">
         <ContainerHome>
           <HomeWrapper>
             <HomeSocial>

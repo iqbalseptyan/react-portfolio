@@ -16,7 +16,7 @@ import iqbal from "../../images/iqbal.png";
 
 const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionSubtitle>Introduction</SectionSubtitle>
       <ContainerAbout>

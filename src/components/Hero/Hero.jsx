@@ -70,14 +70,14 @@ const Hero = () => {
                   width: 1,
                 },
                 collisions: {
-                  enable: true,
+                  enable: false,
                 },
                 move: {
                   direction: "none",
                   enable: true,
                   outMode: "bounce",
                   random: false,
-                  speed: 5,
+                  speed: 4,
                   straight: false,
                 },
                 number: {

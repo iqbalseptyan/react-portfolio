@@ -24,20 +24,30 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { MdApps, MdClose, MdMessage } from "react-icons/md";
-
+import { animateScroll as scroll } from "react-scroll";
 const Navbar = (props) => {
   // toggle menu
   const [toggle, setToggle] = useState(false);
-
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
   return (
     <Header>
       <Container>
         <Nav>
-          <NavLogo>Iqbal Septyan</NavLogo>
+          <NavLogo to="/" onClick={toggleHome}>
+            Iqbal Septyan
+          </NavLogo>
           <NavMenu show={toggle}>
             <NavGridList>
               <NavItem>
-                <NavLinks>
+                <NavLinks
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={700}
+                >
                   <NavIcon>
                     <FaHome />
                   </NavIcon>
@@ -45,7 +55,13 @@ const Navbar = (props) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks>
+                <NavLinks
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={700}
+                >
                   <NavIcon>
                     <FaUser />
                   </NavIcon>
@@ -53,7 +69,13 @@ const Navbar = (props) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks>
+                <NavLinks
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={700}
+                >
                   <NavIcon>
                     <FaFileAlt />
                   </NavIcon>
@@ -61,7 +83,13 @@ const Navbar = (props) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks>
+                <NavLinks
+                  to="services"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={700}
+                >
                   <NavIcon>
                     <FaBriefcase />
                   </NavIcon>
@@ -69,7 +97,13 @@ const Navbar = (props) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks>
+                <NavLinks
+                  to="portfolio"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={700}
+                >
                   <NavIcon>
                     <FaFileImage />
                   </NavIcon>
@@ -77,7 +111,13 @@ const Navbar = (props) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks>
+                <NavLinks
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={700}
+                >
                   <NavIcon>
                     <MdMessage />
                   </NavIcon>

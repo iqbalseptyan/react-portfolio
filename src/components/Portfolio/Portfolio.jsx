@@ -22,7 +22,7 @@ SwiperCore.use([Navigation, Pagination]);
 
 const Portfolio = () => {
   return (
-    <Section>
+    <Section id="portfolio">
       <SectionTitle>Portfolio</SectionTitle>
       <SectionSubtitle>Most recent work</SectionSubtitle>
       <ContainerPortfolio>
