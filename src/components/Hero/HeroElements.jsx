@@ -4,7 +4,11 @@ import { device } from "../MediaQueries";
 
 export const ContainerHero = styled(Container)`
   color: var(--white-color);
-  margin-top: 2rem;
+  margin-top: var(--header-height);
+
+  @media ${device.laptop} {
+    margin-top: 90px;
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -31,7 +35,11 @@ export const HeroContent = styled.div`
   transform: translate(-50%, 50%);
 
   @media ${device.tablet} {
-    transform: translate(-50%, 250%);
+    transform: translate(-50%, 70%);
+  }
+
+  @media ${device.laptop} {
+    transform: translate(-50%, 270%);
   }
 `;
 
@@ -43,6 +51,10 @@ export const HeroTitle = styled.h1`
   @media ${device.tablet} {
     font-size: var(--h2-font-size);
   }
+
+  @media ${device.tablet} {
+    font-size: var(--big-font-size);
+  }
 `;
 
 export const HeroSubtitle = styled.p`
@@ -50,6 +62,10 @@ export const HeroSubtitle = styled.p`
 
   @media ${device.tablet} {
     font-size: var(--normal-font-size);
+  }
+
+  @media ${device.tablet} {
+    font-size: var(--h3-font-size);
   }
 `;
 

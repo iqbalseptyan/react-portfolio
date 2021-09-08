@@ -6,11 +6,18 @@ export const ContainerContact = styled(Container)`
   color: var(--black-color);
 `;
 
-export const ContactWrapper = styled(Grid)``;
+export const ContactWrapper = styled(Grid)`
+  @media ${device.laptop} {
+    grid-template-areas: "Col1 Col2";
+  }
+`;
 
 export const ContactIconWrapper = styled.div`
   display: flex;
   justify-content: center;
+  @media ${device.laptop} {
+    grid-area: Col1;
+  }
 `;
 
 export const ContactIcon = styled.img`
@@ -22,10 +29,16 @@ export const ContactIcon = styled.img`
   @media ${device.tablet} {
     width: 50%;
   }
+  @media ${device.laptop} {
+    width: 100%;
+  }
 `;
 
 export const ContactForm = styled.form`
   display: inline-grid;
+  @media ${device.laptop} {
+    grid-area: Col2;
+  }
 `;
 
 export const ContactWrapperForm = styled(Grid)`
@@ -66,6 +79,9 @@ export const ContactLabel = styled.label`
   @media ${device.tablet} {
     font-size: var(--small-font-size);
   }
+  @media ${device.laptop} {
+    font-size: var(--normal-font-size);
+  }
 `;
 
 export const ContactInput = styled.input`
@@ -78,6 +94,9 @@ export const ContactInput = styled.input`
 
   @media ${device.tablet} {
     font-size: var(--small-font-size);
+  }
+  @media ${device.laptop} {
+    font-size: var(--normal-font-size);
   }
 `;
 
@@ -92,6 +111,9 @@ export const ContactTextArea = styled.textarea`
 
   @media ${device.tablet} {
     font-size: var(--small-font-size);
+  }
+  @media ${device.laptop} {
+    font-size: var(--normal-font-size);
   }
 `;
 

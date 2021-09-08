@@ -7,18 +7,34 @@ export const ContainerPortfolio = styled(Container)`
   z-index: 0;
 `;
 
-export const PortfolioWrapper = styled(Grid)``;
+export const PortfolioWrapper = styled(Grid)`
+  /* display: flex; */
+  @media ${device.laptop} {
+    grid-template-areas: "Col1 Col2";
+    max-width: 768px;
+    align-items: center;
+    margin: auto;
+  }
+`;
 
 export const PortfolioImg = styled.img`
   width: 265px;
   border-radius: 0.5rem;
   justify-self: center;
+
+  @media ${device.laptop} {
+    grid-area: Col1;
+    width: 400px;
+  }
 `;
 
 export const PortfolioData = styled.div`
   color: var(--black-color);
   justify-self: center;
   margin-bottom: var(--mb-2);
+  @media ${device.laptop} {
+    grid-area: Col2;
+  }
 `;
 
 export const PortfolioTitle = styled.h1`
@@ -27,6 +43,9 @@ export const PortfolioTitle = styled.h1`
 
   @media ${device.tablet} {
     font-size: var(--h3-font-size);
+  }
+  @media ${device.laptop} {
+    font-size: var(--h1-font-size);
   }
 `;
 
@@ -38,6 +57,9 @@ export const PortfolioDescription = styled.p`
   @media ${device.tablet} {
     font-size: var(--normal-font-size);
   }
+  @media ${device.laptop} {
+    font-size: var(--h2-font-size);
+  }
 `;
 
 export const PortfolioLink = styled.div`
@@ -45,7 +67,6 @@ export const PortfolioLink = styled.div`
 `;
 
 export const SwiperNavigation = styled.div`
-  /* display: flex; */
   position: absolute;
   align-items: center;
   justify-content: space-between;
@@ -57,6 +78,10 @@ export const SwiperNavigation = styled.div`
   cursor: pointer;
   z-index: var(--z-tooltip);
   display: none;
+
+  @media ${device.laptop} {
+    display: flex;
+  }
 `;
 
 export const SwiperButtonPrev = styled.div`

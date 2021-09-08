@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Grid } from "../GlobalElements";
+import { Container } from "../GlobalElements";
 import {
   Header,
   Nav,

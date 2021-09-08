@@ -19,6 +19,7 @@ import {
   FooterTitle,
   FooterLinkMenu,
   FooterWrapper,
+  FooterTitles,
 } from "./FooterElements";
 
 const Footer = () => {
@@ -26,10 +27,20 @@ const Footer = () => {
     <FooterSection>
       <ContainerFooter>
         <FooterWrapper>
-          <FooterTitle>Iqbal Septyan</FooterTitle>
-          <FooterSubtitle>Web & Mobile apps developer</FooterSubtitle>
-
+          <FooterTitles>
+            <FooterTitle>Iqbal Septyan</FooterTitle>
+            <FooterSubtitle>Web & Mobile apps developer</FooterSubtitle>
+          </FooterTitles>
           <FooterLinkMenu>
+            <FooterLinks>
+              <FooterLink>Home</FooterLink>
+            </FooterLinks>
+            <FooterLinks>
+              <FooterLink>About</FooterLink>
+            </FooterLinks>
+            <FooterLinks>
+              <FooterLink>Skills</FooterLink>
+            </FooterLinks>
             <FooterLinks>
               <FooterLink>Services</FooterLink>
             </FooterLinks>

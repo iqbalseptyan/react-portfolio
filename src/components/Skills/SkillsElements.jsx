@@ -8,6 +8,24 @@ export const ContainerSkills = styled(Container)`
 
 export const SkillsWrapper = styled(Grid)`
   gap: var(--mb-1);
+
+  @media ${device.laptop} {
+    grid-template-areas: "Col1 Col2";
+  }
+`;
+
+export const Col1 = styled.div`
+  padding-bottom: 2rem;
+
+  @media ${device.laptop} {
+    grid-area: Col1;
+  }
+`;
+
+export const Col2 = styled.div`
+  @media ${device.laptop} {
+    grid-area: Col2;
+  }
 `;
 
 export const SkillsHeader = styled.div`
@@ -32,6 +50,9 @@ export const SkillsTitle = styled.h1`
   @media ${device.tablet} {
     font-size: var(--h3-font-size);
   }
+  @media ${device.laptop} {
+    font-size: var(--h1-font-size);
+  }
 `;
 
 export const SkillsSubTitle = styled.p`
@@ -40,6 +61,9 @@ export const SkillsSubTitle = styled.p`
 
   @media ${device.tablet} {
     font-size: var(--normal-font-size);
+  }
+  @media ${device.laptop} {
+    font-size: var(--h3-font-size);
   }
 `;
 
@@ -69,6 +93,9 @@ export const SkillsName = styled.p`
   @media ${device.tablet} {
     font-size: var(--normal-font-size);
   }
+  @media ${device.laptop} {
+    font-size: var(--h3-font-size);
+  }
 `;
 
 export const SkillsNumber = styled.p`
@@ -77,6 +104,9 @@ export const SkillsNumber = styled.p`
 
   @media ${device.tablet} {
     font-size: var(--normal-font-size);
+  }
+  @media ${device.laptop} {
+    font-size: var(--h3-font-size);
   }
 `;
 

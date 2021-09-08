@@ -4,6 +4,16 @@ import { device } from "./MediaQueries";
 export const Container = styled.div`
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
+
+  @media ${device.laptop} {
+    max-width: 1024px;
+    margin: auto;
+  }
+
+  @media ${device.desktop} {
+    max-width: 1366px;
+    margin: auto;
+  }
 `;
 
 export const Section = styled.section`
