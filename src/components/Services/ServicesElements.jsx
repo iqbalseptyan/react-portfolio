@@ -23,10 +23,19 @@ export const ServicesCard = styled.div`
   background-color: ${(props) => !props.theme.txtFirst};
   color: ${(props) => props.theme.txtFirst};
   border-radius: 0.25rem;
-  box-shadow: 1px 1px 8px 4px ${(props) => props.theme.txtSecond};
+  box-shadow: ${(props) =>
+    props.theme.darkTheme
+      ? "0 0 5px 5px var(--white-color)"
+      : "0 0 2px 2px var(--grey-color)"};
   transition: all 0.2s ease-in-out;
+
   &:hover {
-    transform: scale(1.05);
+    box-shadow: ${(props) =>
+      props.theme.darkTheme
+        ? "0 0 1px 1px var(--white-color)"
+        : "0 0 4px 4px var(--grey-color)"};
+
+    transform: scale(1.1);
   }
 `;
 

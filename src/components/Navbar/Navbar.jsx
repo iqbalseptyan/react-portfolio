@@ -132,7 +132,7 @@ const Navbar = (props) => {
           </NavMenu>
           <ToggleMenu>
             <NavToggleTheme onClick={props.handler}>
-              <NavIcon style={{ display: "initial" }}>
+              <NavIcon style={{ display: "inline" }}>
                 {props.toggleTheme ? <FaRegLightbulb /> : <FaLightbulb />}
               </NavIcon>
             </NavToggleTheme>
