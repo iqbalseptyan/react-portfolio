@@ -1,6 +1,8 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
-import "./App.css";
+// import "./App.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -11,6 +13,7 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Scrolltop from "./components/Scrolltop/Scrolltop";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
+import { GlobalStyles } from "./global";
 
 function App() {
   const [toggleTheme, setToggleTheme] = useState(false);
@@ -45,18 +48,24 @@ function App() {
       darkTheme: false,
     };
 
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   return (
     <ThemeProvider theme={updatedTheme}>
-      <Navbar handler={changeState} toggleTheme={toggleTheme} />
-      <Hero />
-      <Home />
-      <About />
-      <Skills />
-      <Services />
-      <Portfolio />
-      <Contact />
-      <Footer />
-      <Scrolltop />
+      <>
+        <GlobalStyles />
+        <Navbar handler={changeState} toggleTheme={toggleTheme} />
+        <Hero />
+        <Home />
+        <About />
+        <Skills />
+        <Services />
+        <Portfolio />
+        <Contact />
+        <Footer />
+        {/* <Scrolltop /> */}
+      </>
     </ThemeProvider>
   );
 }

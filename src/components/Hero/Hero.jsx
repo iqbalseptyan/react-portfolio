@@ -23,7 +23,7 @@ const Hero = () => {
     zIndex: "1",
   };
   return (
-    <Section>
+    <Section style={{ height: "auto" }}>
       <ContainerHero>
         <ImgWrapper>
           <Particles

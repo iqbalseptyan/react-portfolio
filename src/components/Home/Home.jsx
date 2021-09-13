@@ -18,7 +18,7 @@ import {} from "react-icons/fa";
 const Home = () => {
   return (
     <>
-      <Section id="home">
+      <Section id="home" data-aos="fade-right">
         <ContainerHome>
           <HomeWrapper>
             <HomeSocial>

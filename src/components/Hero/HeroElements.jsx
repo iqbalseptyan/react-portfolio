@@ -6,7 +6,7 @@ export const ContainerHero = styled(Container)`
   color: var(--white-color);
   margin-top: var(--header-height);
   @media ${device.laptop} {
-    margin-top: 85px;
+    padding-top: 24px;
   }
 `;
 

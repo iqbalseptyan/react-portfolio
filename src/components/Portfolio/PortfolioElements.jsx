@@ -14,6 +14,23 @@ export const ContainerPortfolio = styled(Container)`
   & .swiper-pagination-bullet-active {
     background-color: ${(props) => props.theme.txtThird};
   }
+
+  @media ${device.mobileS} {
+    & .swiper-button-prev {
+      display: none;
+    }
+    & .swiper-button-next {
+      display: none;
+    }
+  }
+  @media ${device.tablet} {
+    & .swiper-button-prev {
+      display: flex;
+    }
+    & .swiper-button-next {
+      display: flex;
+    }
+  }
 `;
 
 export const PortfolioWrapper = styled(Grid)`

@@ -24,11 +24,11 @@ const Skills = () => {
   const [openBackEnd, setOpenBackEnd] = useState(false);
 
   return (
-    <Section id="skills">
+    <Section id="skills" data-aos="fade-right">
       <SectionTitle>Skills</SectionTitle>
       <SectionSubtitle>Technical</SectionSubtitle>
 
-      <ContainerSkills>
+      <ContainerSkills data-aos="fade-right">
         {/* Frontend */}
         <SkillsWrapper>
           <Col1>

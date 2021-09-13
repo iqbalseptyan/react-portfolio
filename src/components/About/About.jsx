@@ -16,7 +16,7 @@ import iqbal from "../../images/iqbal.png";
 
 const About = () => {
   return (
-    <Section id="about">
+    <Section id="about" data-aos="fade-left">
       <SectionTitle>About Me</SectionTitle>
       <SectionSubtitle>Introduction</SectionSubtitle>
       <ContainerAbout>

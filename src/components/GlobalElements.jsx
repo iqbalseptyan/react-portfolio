@@ -19,9 +19,15 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   padding: 2rem 0 4rem;
-
+  &.active {
+    background-color: red;
+  }
   background-color: ${(props) => props.theme.bg};
   color: ${(props) => props.theme.txtFirst};
+
+  @media ${device.laptop} {
+    height: 600px;
+  }
 `;
 
 export const SectionTitle = styled.h1`

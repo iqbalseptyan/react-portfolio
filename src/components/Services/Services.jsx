@@ -60,7 +60,7 @@ const Services = () => {
   }
 
   return (
-    <Section id="services">
+    <Section id="services" data-aos="fade-left">
       <SectionTitle>Services</SectionTitle>
       <SectionSubtitle>Offer</SectionSubtitle>
 

@@ -25,7 +25,7 @@ export const ServicesCard = styled.div`
   border-radius: 0.25rem;
   box-shadow: ${(props) =>
     props.theme.darkTheme
-      ? "0 0 5px 5px var(--white-color)"
+      ? "0 0 2px 2px var(--white-color)"
       : "0 0 2px 2px var(--grey-color)"};
   transition: all 0.2s ease-in-out;
 

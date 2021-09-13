@@ -83,7 +83,6 @@ export const NavMenu = styled.ul`
   padding: 2rem 1.5rem 4rem;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
   border-radius: 1rem 1rem 0 0;
-  transition: 0.3s;
   width: 100%;
   z-index: 1;
   @media ${device.laptop} {
@@ -126,7 +125,6 @@ export const NavItem = styled.li`
     }
     display: flex;
     align-items: center;
-    height: inherit;
   }
 `;
 
@@ -176,7 +174,13 @@ export const NavToggleTheme = styled.div`
     align-items: center;
     height: var(--header-height-desktop);
     animation-delay: 1300ms;
-    &:hover {
+    width: 50px;
+    justify-content: center;
+    ${NavIcon} {
+      transition: 0.3s;
+      &:hover {
+        font-size: 2rem;
+      }
     }
   }
 `;
