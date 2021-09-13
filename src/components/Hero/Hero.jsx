@@ -3,6 +3,7 @@ import {
   ContainerHero,
   HeroContent,
   HeroImg,
+  HeroScroll,
   HeroShadow,
   HeroSubtitle,
   HeroTitle,
@@ -12,6 +13,7 @@ import hero from "../../images/hero.png";
 import { Section } from "../GlobalElements";
 import ReactTyped from "react-typed";
 import Particles from "react-particles-js";
+import { BiDownArrow, BiMouse } from "react-icons/bi";
 
 const Hero = () => {
   const particleStyle = {
@@ -22,8 +24,9 @@ const Hero = () => {
     bottom: "0",
     zIndex: "1",
   };
+
   return (
-    <Section style={{ height: "auto" }}>
+    <Section id="hero" style={{ height: "auto" }}>
       <ContainerHero>
         <ImgWrapper>
           <Particles
@@ -113,6 +116,17 @@ const Hero = () => {
               />
             </HeroSubtitle>
           </HeroContent>
+          <HeroScroll
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={700}
+          >
+            <BiMouse size={24} />
+            Scroll down
+            <BiDownArrow />
+          </HeroScroll>
         </ImgWrapper>
       </ContainerHero>
     </Section>

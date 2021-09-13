@@ -1,12 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Container } from "../GlobalElements";
 import { device } from "../MediaQueries";
+import { Link as scroll } from "react-scroll";
 
 export const ContainerHero = styled(Container)`
   color: var(--white-color);
   margin-top: var(--header-height);
   @media ${device.laptop} {
-    padding-top: 24px;
+    padding-top: 1rem;
   }
 `;
 
@@ -73,32 +74,25 @@ export const HeroImg = styled.img`
   width: 100%;
 `;
 
-export const HeroScroll = styled.div`
-  /* display:none */
-`;
-
-export const HeroButtonScroll = styled.a`
-  color: var(--dark-purple-color);
-  transition: 0.3s;
-
-  &:hover {
-    transform: translateY(0.25rem);
+const mouseAnimate = keyframes`
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
   }
 `;
 
-export const HeroMouse = styled.div`
-  font-size: 2rem;
+export const HeroScroll = styled(scroll)`
+  display: none;
+  @media ${device.laptop} {
+    animation: ${mouseAnimate} 2s infinite;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: var(--mb-1-5);
+    left: var(--mb-2-5);
+    color: var(--purple-color);
+    cursor: pointer;
+  }
 `;
-
-export const HeroName = styled.div`
-  font-size: var(--small-font-size);
-  color: var(--black-color);
-  font-weight: var(--font-medium);
-  margin-right: var(--mb-0-25);
-`;
-
-export const HeroArrow = styled.div`
-  font-size: 1.25rem;
-`;
-
-export const ButtonFlex = styled.div``;

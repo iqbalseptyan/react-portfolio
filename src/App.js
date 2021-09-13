@@ -12,7 +12,7 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Scrolltop from "./components/Scrolltop/Scrolltop";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
-import { GlobalStyles } from "./global";
+import { GlobalStyles } from "./Global";
 
 function App() {
   const [toggleTheme, setToggleTheme] = useState(false);
@@ -20,7 +20,6 @@ function App() {
   const changeState = () => {
     setToggleTheme((current) => !current);
   };
-
   const theme = {
     bg: "var(--white-color)",
     txtFirst: "var(--black-color)",
@@ -50,6 +49,7 @@ function App() {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
+
   return (
     <ThemeProvider theme={updatedTheme}>
       <>

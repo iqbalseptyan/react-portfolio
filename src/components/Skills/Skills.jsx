@@ -104,13 +104,6 @@ const Skills = () => {
                 </SkillsTitles>
                 <SkillsBar max="100" value="80"></SkillsBar>
               </SkillsData>
-              <SkillsData>
-                <SkillsTitles>
-                  <SkillsName>Firebase</SkillsName>
-                  <SkillsNumber>80%</SkillsNumber>
-                </SkillsTitles>
-                <SkillsBar max="100" value="80"></SkillsBar>
-              </SkillsData>
             </SkillsList>
           </Col2>
         </SkillsWrapper>

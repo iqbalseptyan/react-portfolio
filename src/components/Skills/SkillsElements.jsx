@@ -72,6 +72,7 @@ export const SkillsList = styled(Grid)`
   height: ${(props) => (props.open ? 0 : "100%")};
   overflow: hidden;
   transition: 0.3s;
+  gap: 0;
 `;
 
 export const SkillsData = styled.div`
