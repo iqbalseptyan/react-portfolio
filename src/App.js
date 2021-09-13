@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
-// import "./App.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import About from "./components/About/About";
@@ -64,7 +63,7 @@ function App() {
         <Portfolio />
         <Contact />
         <Footer />
-        {/* <Scrolltop /> */}
+        <Scrolltop />
       </>
     </ThemeProvider>
   );
