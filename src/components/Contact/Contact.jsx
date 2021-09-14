@@ -21,7 +21,17 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <Section id="contact" style={{ height: "auto" }} data-aos="fade-left">
+    <Section
+      id="contact"
+      style={{ height: "auto" }}
+      data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-anchor-placement="top-center"
+    >
       <SectionTitle>Contact</SectionTitle>
       <SectionSubtitle>Get in touch</SectionSubtitle>
       <ContainerContact>

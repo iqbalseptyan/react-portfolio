@@ -24,7 +24,16 @@ const Skills = () => {
   const [openBackEnd, setOpenBackEnd] = useState(false);
 
   return (
-    <Section id="skills" data-aos="fade-right">
+    <Section
+      id="skills"
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-anchor-placement="top-center"
+    >
       <SectionTitle>Skills</SectionTitle>
       <SectionSubtitle>Technical</SectionSubtitle>
 

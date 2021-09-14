@@ -22,7 +22,16 @@ SwiperCore.use([Navigation, Pagination]);
 
 const Portfolio = () => {
   return (
-    <Section id="portfolio" data-aos="fade-right">
+    <Section
+      id="portfolio"
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-anchor-placement="top-center"
+    >
       <SectionTitle>Portfolio</SectionTitle>
       <SectionSubtitle>Most recent work</SectionSubtitle>
       <ContainerPortfolio>

@@ -15,8 +15,12 @@ import Skills from "./components/Skills/Skills";
 import { GlobalStyles } from "./Global";
 
 function App() {
+  const [size, setSize] = useState(window.innerWidth);
   const [toggleTheme, setToggleTheme] = useState(false);
 
+  const checkSize = () => {
+    setSize(window.innerWidth);
+  };
   const changeState = () => {
     setToggleTheme((current) => !current);
   };
@@ -47,8 +51,15 @@ function App() {
     };
 
   useEffect(() => {
-    Aos.init({ duration: 3000 });
-  }, []);
+    window.addEventListener("resize", checkSize);
+    Aos.init({
+      disable: () => size <= 768,
+    });
+
+    return () => {
+      window.removeEventListener("resize", checkSize);
+    };
+  }, [size]);
 
   return (
     <ThemeProvider theme={updatedTheme}>

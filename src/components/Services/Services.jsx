@@ -60,7 +60,16 @@ const Services = () => {
   }
 
   return (
-    <Section id="services" data-aos="fade-left">
+    <Section
+      id="services"
+      data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-anchor-placement="top-center"
+    >
       <SectionTitle>Services</SectionTitle>
       <SectionSubtitle>Offer</SectionSubtitle>
 

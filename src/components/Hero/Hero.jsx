@@ -120,7 +120,7 @@ const Hero = () => {
             to="home"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={-160}
             duration={700}
           >
             <BiMouse size={24} />

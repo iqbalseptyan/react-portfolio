@@ -45,7 +45,7 @@ const Navbar = (props) => {
                   to="home"
                   spy={true}
                   smooth={true}
-                  offset={-50}
+                  offset={-150}
                   duration={700}
                 >
                   <NavIcon>
