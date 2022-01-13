@@ -41,12 +41,12 @@ const About = () => {
             </AboutDescription>
             <AboutInfo>
               <AboutInfoWrapper>
-                <AboutInfoTitle>4+</AboutInfoTitle>
-                <AboutInfoSubTitle>Years experience </AboutInfoSubTitle>
+                <AboutInfoTitle>5+</AboutInfoTitle>
+                <AboutInfoSubTitle>Years experience</AboutInfoSubTitle>
               </AboutInfoWrapper>
               <AboutInfoWrapper>
                 <AboutInfoTitle>10+</AboutInfoTitle>
-                <AboutInfoSubTitle>Completed project</AboutInfoSubTitle>
+                <AboutInfoSubTitle>Completed self project</AboutInfoSubTitle>
               </AboutInfoWrapper>
               <AboutInfoWrapper>
                 <AboutInfoTitle>1+</AboutInfoTitle>

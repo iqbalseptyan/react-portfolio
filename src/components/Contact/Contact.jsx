@@ -20,6 +20,9 @@ import { Button, ButtonFlex, ButtonIcon, ButtonText } from "../ButtonElements";
 import { FaArrowRight } from "react-icons/fa";
 
 const Contact = () => {
+  const handleSubmit = () => {
+    window.alert("sorry this from is disabled");
+  };
   return (
     <Section
       id="contact"
@@ -57,7 +60,7 @@ const Contact = () => {
                 <ContactLabel>Description</ContactLabel>
                 <ContactTextArea rows="7" cols="0" />
               </ContactDescription>
-              <Button>
+              <Button onClick={handleSubmit}>
                 <ButtonFlex>
                   <ButtonText>Send Me</ButtonText>
                   <ButtonIcon>

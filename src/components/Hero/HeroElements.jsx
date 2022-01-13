@@ -6,9 +6,6 @@ import { Link as scroll } from "react-scroll";
 export const ContainerHero = styled(Container)`
   color: var(--white-color);
   margin-top: var(--header-height);
-  @media ${device.laptop} {
-    padding-top: 1rem;
-  }
 `;
 
 export const ImgWrapper = styled.div`

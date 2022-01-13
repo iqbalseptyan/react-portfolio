@@ -9,8 +9,8 @@ export const Container = styled.div`
   @media ${device.laptop} {
     max-width: 1024px;
     margin: auto;
+    width: 95vw;
   }
-
   @media ${device.desktop} {
     max-width: 1366px;
     margin: auto;

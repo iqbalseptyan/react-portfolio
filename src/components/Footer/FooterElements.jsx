@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { device } from "../MediaQueries";
 import { Container, Grid } from "../GlobalElements";
+import { Link as scroll } from "react-scroll";
 
 export const FooterSection = styled.footer`
   padding: 2rem 0;
@@ -71,7 +72,7 @@ export const FooterLinks = styled.li`
   display: block;
 `;
 
-export const FooterLink = styled.a`
+export const FooterLink = styled(scroll)`
   cursor: pointer;
   font-size: var(--small-font-size);
 
@@ -82,7 +83,7 @@ export const FooterLink = styled.a`
     font-size: var(--h3-font-size);
 
     &:hover {
-      color: ${(props) => props.theme.txtThird};
+      color: var(--purple-color);
     }
   }
 `;

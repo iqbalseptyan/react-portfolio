@@ -78,7 +78,6 @@ export const AboutInfoSubTitle = styled.p`
   font-size: var(--smaller-font-size);
   width: 100px;
   word-wrap: break-word;
-
   @media ${device.tablet} {
     font-size: var(--small-font-size);
   }

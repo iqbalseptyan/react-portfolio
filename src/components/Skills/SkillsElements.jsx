@@ -100,6 +100,11 @@ export const SkillsName = styled.p`
   }
 `;
 
+export const SkillsLevel = styled.small`
+  color: ${(props) => props.theme.txtSecond};
+  font-size: var(--small-font-size);
+`;
+
 export const SkillsNumber = styled.p`
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);

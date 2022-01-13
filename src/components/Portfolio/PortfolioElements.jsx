@@ -43,15 +43,22 @@ export const PortfolioWrapper = styled(Grid)`
   }
 `;
 
-export const PortfolioImg = styled.img`
+export const PortfolioImgWrapper = styled.div`
+  display: flex;
   width: 265px;
+  height: 225px;
   border-radius: 0.5rem;
-  justify-self: center;
-
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
   @media ${device.laptop} {
     grid-area: Col1;
     width: 400px;
   }
+`;
+
+export const PortfolioImg = styled.img`
+  width: 100%;
 `;
 
 export const PortfolioData = styled.div`

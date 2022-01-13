@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import {
   FooterSection,
   ContainerFooter,
@@ -33,48 +27,103 @@ const Footer = () => {
           </FooterTitles>
           <FooterLinkMenu>
             <FooterLinks>
-              <FooterLink>Home</FooterLink>
+              <FooterLink
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={700}
+              >
+                Home
+              </FooterLink>
             </FooterLinks>
             <FooterLinks>
-              <FooterLink>About</FooterLink>
+              <FooterLink
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={700}
+              >
+                About
+              </FooterLink>
             </FooterLinks>
             <FooterLinks>
-              <FooterLink>Skills</FooterLink>
+              <FooterLink
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={700}
+              >
+                Skills
+              </FooterLink>
             </FooterLinks>
             <FooterLinks>
-              <FooterLink>Services</FooterLink>
+              <FooterLink
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={700}
+              >
+                Services
+              </FooterLink>
             </FooterLinks>
             <FooterLinks>
-              <FooterLink>Portfolio</FooterLink>
+              <FooterLink
+                to="portfolio"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={700}
+              >
+                Portfolio
+              </FooterLink>
             </FooterLinks>
             <FooterLinks>
-              <FooterLink>Contact Me</FooterLink>
+              <FooterLink
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={700}
+              >
+                Contact Me
+              </FooterLink>
             </FooterLinks>
           </FooterLinkMenu>
 
           <FooterSocials>
             <FooterSocial>
-              <FooterIcon href="https://www.facebook.com">
+              <FooterIcon
+                href="https://www.facebook.com/miiqbals"
+                target="_blank"
+              >
                 <FaFacebook />
               </FooterIcon>
             </FooterSocial>
             <FooterSocial>
-              <FooterIcon href="https://www.instagram.com">
+              <FooterIcon
+                href="https://www.instagram.com/ismboi"
+                target="_blank"
+              >
                 <FaInstagram />
               </FooterIcon>
             </FooterSocial>
             <FooterSocial>
-              <FooterIcon href="https://www.whatsapp.com">
-                <FaWhatsapp />
-              </FooterIcon>
-            </FooterSocial>
-            <FooterSocial>
-              <FooterIcon href="https://www.github.com">
+              <FooterIcon
+                href="https://www.github.com/iqbalseptyan"
+                target="_blank"
+              >
                 <FaGithub />
               </FooterIcon>
             </FooterSocial>
             <FooterSocial>
-              <FooterIcon href="https://www.linkedin.com">
+              <FooterIcon
+                href="https://www.linkedin.com/in/iqbal-septyan-835073202/"
+                target="_blank"
+              >
                 <FaLinkedin />
               </FooterIcon>
             </FooterSocial>

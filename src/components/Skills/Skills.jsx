@@ -16,6 +16,7 @@ import {
   SkillsTitles,
   Col1,
   Col2,
+  SkillsLevel,
 } from "./SkillsElements";
 import { FaAngleDown, FaCode } from "react-icons/fa";
 
@@ -56,36 +57,54 @@ const Skills = () => {
             <SkillsList open={openFrontEnd}>
               <SkillsData>
                 <SkillsTitles>
-                  <SkillsName>HTML</SkillsName>
+                  <SkillsName>
+                    HTML <SkillsLevel>(Expert)</SkillsLevel>
+                  </SkillsName>
                   <SkillsNumber>90%</SkillsNumber>
                 </SkillsTitles>
                 <SkillsBar max="100" value="90" />
               </SkillsData>
               <SkillsData>
                 <SkillsTitles>
-                  <SkillsName>CSS</SkillsName>
+                  <SkillsName>
+                    CSS <SkillsLevel>(Expert)</SkillsLevel>
+                  </SkillsName>
                   <SkillsNumber>85%</SkillsNumber>
                 </SkillsTitles>
                 <SkillsBar max="100" value="85" />
               </SkillsData>
               <SkillsData>
                 <SkillsTitles>
-                  <SkillsName>Javascript</SkillsName>
+                  <SkillsName>
+                    Java <SkillsLevel>(Intermediate)</SkillsLevel>
+                  </SkillsName>
                   <SkillsNumber>80%</SkillsNumber>
                 </SkillsTitles>
                 <SkillsBar max="100" value="80" />
               </SkillsData>
               <SkillsData>
                 <SkillsTitles>
-                  <SkillsName>React</SkillsName>
+                  <SkillsName>
+                    Javascript <SkillsLevel>(Intermediate)</SkillsLevel>
+                  </SkillsName>
                   <SkillsNumber>80%</SkillsNumber>
+                </SkillsTitles>
+                <SkillsBar max="100" value="80" />
+              </SkillsData>
+              <SkillsData>
+                <SkillsTitles>
+                  <SkillsName>
+                    React <SkillsLevel>(Intermediate)</SkillsLevel>
+                  </SkillsName>
+                  <SkillsNumber>
+                    <SkillsLevel>1 years experience</SkillsLevel> 80%
+                  </SkillsNumber>
                 </SkillsTitles>
                 <SkillsBar max="100" value="80" />
               </SkillsData>
             </SkillsList>
           </Col1>
           <Col2>
-            {" "}
             <SkillsHeader>
               <SkillsIcon>
                 <FaCode />
@@ -101,14 +120,18 @@ const Skills = () => {
             <SkillsList open={!openBackEnd}>
               <SkillsData>
                 <SkillsTitles>
-                  <SkillsName>PHP</SkillsName>
+                  <SkillsName>
+                    PHP <SkillsLevel>(Intermediate)</SkillsLevel>
+                  </SkillsName>
                   <SkillsNumber>80%</SkillsNumber>
                 </SkillsTitles>
                 <SkillsBar max="100" value="80"></SkillsBar>
               </SkillsData>
               <SkillsData>
                 <SkillsTitles>
-                  <SkillsName>NodeJS</SkillsName>
+                  <SkillsName>
+                    NodeJS <SkillsLevel>(Intermediate)</SkillsLevel>
+                  </SkillsName>
                   <SkillsNumber>80%</SkillsNumber>
                 </SkillsTitles>
                 <SkillsBar max="100" value="80"></SkillsBar>

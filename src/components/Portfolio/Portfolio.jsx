@@ -8,9 +8,10 @@ import {
   PortfolioTitle,
   PortfolioWrapper,
   PortfolioLink,
+  PortfolioImgWrapper,
 } from "./PortfolioElements";
 import { Button, ButtonFlex, ButtonIcon } from "../ButtonElements";
-import image from "../../images/Image.png";
+import image from "../../images/nukang.png";
 import { FaArrowRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper/core";
@@ -21,6 +22,9 @@ import "swiper/components/pagination/pagination.min.css";
 SwiperCore.use([Navigation, Pagination]);
 
 const Portfolio = () => {
+  const handleLink = () => {
+    window.open("https://www.nukanghub.com", "_blank");
+  };
   return (
     <Section
       id="portfolio"
@@ -44,15 +48,17 @@ const Portfolio = () => {
         >
           <SwiperSlide>
             <PortfolioWrapper>
-              <PortfolioImg src={image} />
+              <PortfolioImgWrapper>
+                <PortfolioImg src={image} />
+              </PortfolioImgWrapper>
               <PortfolioData>
-                <PortfolioTitle>Modern Website</PortfolioTitle>
+                <PortfolioTitle>NUKANGHUB</PortfolioTitle>
                 <PortfolioDescription>
                   Website adoptable to all devices, with ui components and
-                  animated interactions
+                  animated interactions, my first project with company
                 </PortfolioDescription>
                 <PortfolioLink>
-                  <Button>
+                  <Button onClick={handleLink}>
                     <ButtonFlex>
                       Detail
                       <ButtonIcon>
@@ -61,46 +67,6 @@ const Portfolio = () => {
                     </ButtonFlex>
                   </Button>
                 </PortfolioLink>
-              </PortfolioData>
-            </PortfolioWrapper>
-          </SwiperSlide>
-          <SwiperSlide>
-            <PortfolioWrapper>
-              <PortfolioImg src={image} />
-              <PortfolioData>
-                <PortfolioTitle>Modern Website</PortfolioTitle>
-                <PortfolioDescription>
-                  Website adoptable to all devices, with ui components and
-                  animated interactions
-                </PortfolioDescription>
-                <Button>
-                  <ButtonFlex>
-                    Detail
-                    <ButtonIcon>
-                      <FaArrowRight />
-                    </ButtonIcon>
-                  </ButtonFlex>
-                </Button>
-              </PortfolioData>
-            </PortfolioWrapper>
-          </SwiperSlide>
-          <SwiperSlide>
-            <PortfolioWrapper>
-              <PortfolioImg src={image} />
-              <PortfolioData>
-                <PortfolioTitle>Modern Website</PortfolioTitle>
-                <PortfolioDescription>
-                  Website adoptable to all devices, with ui components and
-                  animated interactions
-                </PortfolioDescription>
-                <Button>
-                  <ButtonFlex>
-                    Detail
-                    <ButtonIcon>
-                      <FaArrowRight />
-                    </ButtonIcon>
-                  </ButtonFlex>
-                </Button>
               </PortfolioData>
             </PortfolioWrapper>
           </SwiperSlide>
